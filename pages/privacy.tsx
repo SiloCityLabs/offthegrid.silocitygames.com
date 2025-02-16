@@ -30,7 +30,8 @@ export default function Privacy() {
                       This Privacy Policy governs the manner in which
                       Techreanimate collects, uses, maintains and discloses
                       information collected from users (each, a
-                      &quot;User&quot;) of the https://YOUR_DOAMIN website
+                      &quot;User&quot;) of the
+                      https://offthegrid.silocitygames.com website
                       (&quot;Site&quot;). This privacy policy applies to the
                       Site and all products and services offered by
                       Techreanimate.
@@ -199,7 +200,9 @@ export default function Privacy() {
                       Please also visit our Terms and Conditions section
                       establishing the use, disclaimers, and limitations of
                       liability governing the use of our website at{" "}
-                      <Link href="/terms">https://YOUR_DOAMIN/terms</Link>
+                      <Link href="/terms">
+                        https://offthegrid.silocitygames.com/terms
+                      </Link>
                     </p>
                     <br />
                     <h1>Your Consent</h1>

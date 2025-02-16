@@ -10,7 +10,7 @@ const defaultNavLinks = [
   { label: "Home", href: "/", target: "" },
   {
     label: "GitHub",
-    href: "https://github.com/Bana0615/bootstrap-nextjs-github-pages",
+    href: "https://github.com/SiloCityLabs/offthegrid.silocitygames.com",
     target: "_blank",
   },
 ];
@@ -27,7 +27,7 @@ function Header(props: HeaderProps) {
       className={`${className}`}
     >
       <Container>
-        <Navbar.Brand href="/">bootstrap-nextjs-github-pages</Navbar.Brand>
+        <Navbar.Brand href="/">Off The Grid</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
