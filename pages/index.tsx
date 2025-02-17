@@ -34,9 +34,7 @@ export default function Home() {
                   title={card.title}
                   text={card.text}
                   variant={card.variant}
-                  btn1Text={card.btn1Text}
-                  link={card.link}
-                  disabled={card.disabled}
+                  buttons={card.buttons}
                 />
               </Col>
             ))}
