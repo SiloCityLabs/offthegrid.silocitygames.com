@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Starter Legs",
+    "type": "Legs",
+    "rarity": "common",
+    "cost": 200
+  },
+  {
+    "name": "Leapers",
+    "type": "Legs",
+    "rarity": "all"
+  },
+  {
+    "name": "Thumpers",
+    "type": "Legs",
+    "rarity": "all"
+  },
+  {
+    "name": "Hammerheads",
+    "type": "Legs",
+    "rarity": "all"
+  },
+  {
+    "name": "Roadrunners",
+    "type": "Legs",
+    "rarity": "all"
+  }
+]

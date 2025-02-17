@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Simple Backpack",
+    "type": "Backpack",
+    "rarity": "common",
+    "cost": 200
+  },
+  {
+    "name": "Simple Backpack",
+    "type": "Backpack",
+    "rarity": "uncommon",
+    "cost": 350
+  },
+  {
+    "name": "Soldier Backpack",
+    "type": "Backpack",
+    "rarity": "rare",
+    "cost": 900
+  },
+  {
+    "name": "Limb Accelerator Backpack",
+    "type": "Backpack",
+    "rarity": "rare",
+    "cost": 900
+  },
+  {
+    "name": "GridShield Backpack",
+    "type": "Backpack",
+    "rarity": "epic",
+    "cost": 1500
+  }
+]

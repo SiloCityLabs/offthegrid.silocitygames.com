@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Starter Arm",
+    "type": "Arm",
+    "rarity": "Common",
+    "cost": 200
+  },
+  {
+    "name": "Ghost",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Paralyzer",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Buzzkilla",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Recon Drone",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "SlamFist",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Hookshot",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Ripper",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Kinetic Shield",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Javelina",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Bouncebomber",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Phosphor Fury",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Tripmine",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Slugger",
+    "type": "Arm",
+    "rarity": "all"
+  },
+  {
+    "name": "Skunkpaw",
+    "type": "Arm",
+    "rarity": "all"
+  }
+]
