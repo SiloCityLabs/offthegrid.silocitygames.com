@@ -9,6 +9,7 @@ import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 // import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchBody } from "@/helpers/fetch/fetchBody";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
+import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
 //Utils
 import { sendEvent } from "@/utils/gtag";
 //json
@@ -48,8 +49,6 @@ function OffTheGridLoadout() {
         <>
             <Container id="random-class" className="shadow-lg p-3 bg-body rounded">
                 <ClassName isGenerating={isGenerating} value={randClassName} />
-                <h4 className="text-center mb-3">Delivery Cost: {deliveryCost}</h4>
-                <hr />
                 <Row className="justify-content-md-center">
                     <Col sm className="text-center mb-3 mb-md-0">
                         <SimpleGeneratorView
@@ -151,6 +150,42 @@ function OffTheGridLoadout() {
                         />
                     </Col>
                 </Row>
+                <hr />
+                <Row className="justify-content-md-center mb-3">
+                    <Col sm className="text-center mb-3 mb-md-0">
+                        <SimpleGeneratorView
+                            isGenerating={isGenerating}
+                            title="Backpack"
+                            value={
+                                !equipment.backpack.name
+                                    ? "None"
+                                    : `${equipment.backpack.rarity}: ${equipment.backpack.name}`
+                            }
+                        />
+                    </Col>
+                    <Col sm className="text-center mb-3 mb-md-0">
+                        <SimpleGeneratorView
+                            isGenerating={isGenerating}
+                            title="Consumable"
+                            value={
+                                !equipment.consumable.name
+                                    ? "None"
+                                    : `${equipment.consumable.rarity}: ${equipment.consumable.name}`
+                            }
+                        />
+                    </Col>
+                    <Col sm className="text-center mb-3 mb-md-0">
+                        <SimpleGeneratorView
+                            isGenerating={isGenerating}
+                            title="Delivery Cost"
+                            value={
+                                !deliveryCost
+                                    ? "None"
+                                    : deliveryCost
+                            }
+                        />
+                    </Col>
+                </Row>
                 <Row id="button-row">
                     <Col className="text-center">
                         <Button
@@ -203,8 +238,6 @@ async function fetchLoadoutData(setData) {
         deliveryCost += weapons.secondary.weapon.cost;
         deliveryCost += weapons.sidearm.weapon.cost;
 
-        console.log("weapons", weapons);
-
         // //Get Primary Attachments
         // if (!weapons.primary.weapon?.no_attach) {
         //     weapons.primary.attachments = Object.values(fetchAttachments(weapons.primary.weapon, primAttachCount)).join(", ")
@@ -223,16 +256,21 @@ async function fetchLoadoutData(setData) {
         let body = {
             left_arm: Math.random() < 0.5 ? fetchBody("arm", game) : defaultItem,
             legs: Math.random() < 0.5 ? fetchBody("legs", game) : defaultItem,
-            right_arm: Math.random() < 0.5 ? fetchBody("right_arm", game) : defaultItem,
+            right_arm: Math.random() < 0.5 ? fetchBody("arm", game) : defaultItem,
         };
         //Update DeliveryCost with body
         deliveryCost += body.left_arm.cost;
         deliveryCost += body.legs.cost;
         deliveryCost += body.right_arm.cost;
-        console.log("body", body);
-        let equipment = {};
 
-        setData({ ...defaultData, deliveryCost, randClassName, weapons, body });
+        let equipment = {
+            backpack: Math.random() < 0.5 ? fetchEquipment("backpack", game) : defaultItem,
+            consumable: Math.random() < 0.5 ? fetchEquipment("consumable", game) : defaultItem,
+        };
+        deliveryCost += equipment.backpack.cost;
+        deliveryCost += equipment.consumable.cost;
+
+        setData({ ...defaultData, deliveryCost, randClassName, weapons, body, equipment });
     } catch (error: any) {
         console.error(error.message); // Handle errors centrally
     }

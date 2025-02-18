@@ -5,6 +5,5 @@ const data: Record<string, any> = {
 };
 
 export function getPrimaryList(game: string): any {
-    console.log("getPrimaryList data[game]", data[game]);
     return data[game] || {};
 }

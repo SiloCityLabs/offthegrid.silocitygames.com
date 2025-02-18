@@ -37,7 +37,6 @@ export function fetchWeapon(
         do {
             rollAgain = false;
             data = randomListItem(getWeaponList(game));
-            console.log("fetchWeapon", type, data);
 
             //Roll a weapon that has attachments\
             if (needsAttachments && data.no_attach) {

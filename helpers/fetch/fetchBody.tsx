@@ -18,11 +18,11 @@ export function fetchBody(
     type: string = "",
     game: string
 ): GeneratorItem {
-    const getEquipmentList = bodyListGetters[type];
+    const getBodyList = bodyListGetters[type];
     const randomRarity = raritys[Math.floor(Math.random() * raritys.length)];
 
-    if (getEquipmentList) {
-        let data: GeneratorItem = randomListItem(getEquipmentList(game));
+    if (getBodyList) {
+        let data: GeneratorItem = randomListItem(getBodyList(game));
 
         return { ...data, rarity: randomRarity.name, cost: randomRarity.cost };
     } else {

@@ -25,7 +25,7 @@ export default function OffTheGridGenerator() {
       <Container fluid>
         <Row>
           <Col>
-            <h2 className="text-center">
+            <h2 className="text-center mt-3">
               Off The Grid
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />

@@ -60,12 +60,14 @@
         "backpack": {
             "name": "",
             "type": "",
-            "cost": 0
+            "cost": 0,
+            "rarity": ""
         },
         "consumable": {
             "name": "",
             "type": "",
-            "cost": 0
+            "cost": 0,
+            "rarity": ""
         }
     }
 }
