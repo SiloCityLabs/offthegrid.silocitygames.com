@@ -1,7 +1,7 @@
 [
   {
     "name": "Armor Kit Gen I",
-    "type": "consumable",
+    "type": "Consumable",
     "rarity": "Common",
     "cost": 50
   }

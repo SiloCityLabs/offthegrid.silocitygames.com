@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import SclCard from "@/components/_silabs/SclCard";
 
-export default function BlackOpsSixInfo() {
+export default function OffTheGridInfo() {
     const navLinks = [
         { label: "Home", href: "/" },
         { label: "Generator", href: "/generator" },
