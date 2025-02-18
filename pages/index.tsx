@@ -16,7 +16,7 @@ export default function Home() {
           name="description"
           content="Your hub for all off the grid random class generators past, present and future."
         />
-        <meta name="keywords" content="off the grid" />
+        <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
       </Head>
       <div className="main-container">
         <Header />
