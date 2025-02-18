@@ -10,3 +10,11 @@
 .main-content {
   flex-grow: 1;
 }
+
+#main-header {
+  background: #DC3545 !important;
+}
+
+#main-header a {
+  color: white !important;
+}

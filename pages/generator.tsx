@@ -21,7 +21,7 @@ export default function OffTheGridGenerator() {
         />
         <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
       </Head>
-      <Header className="black-ops" navLinks={navLinks} />
+      <Header navLinks={navLinks} />
       <Container fluid>
         <Row>
           <Col>
