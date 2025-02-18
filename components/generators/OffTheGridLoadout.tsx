@@ -7,7 +7,7 @@ import SimpleGeneratorView from "@/components/generators/SimpleGeneratorView";
 import { scrollToTop } from "@/helpers/scrollToTop";
 import { fetchWeapon } from "@/helpers/fetch/fetchWeapon";
 // import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
-// import { fetchEquipment } from "@/helpers/fetch/fetchEquipment";
+import { fetchBody } from "@/helpers/fetch/fetchBody";
 import { fetchClassName } from "@/helpers/fetch/fetchClassName";
 //Utils
 import { sendEvent } from "@/utils/gtag";
@@ -15,6 +15,7 @@ import { sendEvent } from "@/utils/gtag";
 import defaultData from "@/json/otg/default-generator-info.json";
 
 const defaultWeapon = { name: "", type: "", game: "", no_attach: false, cost: 0 };
+const defaultItem = { name: "", type: "", game: "", cost: 0 };
 
 function OffTheGridLoadout() {
     const [isLoading, setIsLoading] = useState(true);
@@ -116,27 +117,39 @@ function OffTheGridLoadout() {
                 </Row>
                 <hr />
                 <Row className="justify-content-md-center">
-                    {/* <Col sm className="text-center mb-3 mb-md-0">
+                    <Col sm className="text-center mb-3 mb-md-0">
                         <SimpleGeneratorView
                             isGenerating={isGenerating}
-                            title="Tactical"
-                            value={equipment.tactical.name}
+                            title="Left Arm"
+                            value={
+                                !body.left_arm.name
+                                    ? "None"
+                                    : `${body.left_arm.rarity}: ${body.left_arm.name}`
+                            }
                         />
                     </Col>
                     <Col sm className="text-center mb-3 mb-md-0">
                         <SimpleGeneratorView
                             isGenerating={isGenerating}
-                            title="Lethal"
-                            value={equipment.lethal.name}
+                            title="Legs"
+                            value={
+                                !body.legs.name
+                                    ? "None"
+                                    : `${body.legs.rarity}: ${body.legs.name}`
+                            }
                         />
                     </Col>
-                    <Col sm className="text-center">
+                    <Col sm className="text-center mb-3 mb-md-0">
                         <SimpleGeneratorView
                             isGenerating={isGenerating}
-                            title="Perks"
-                            value={perks}
+                            title="Right Arm"
+                            value={
+                                !body.right_arm.name
+                                    ? "None"
+                                    : `${body.right_arm.rarity}: ${body.right_arm.name}`
+                            }
                         />
-                    </Col> */}
+                    </Col>
                 </Row>
                 <Row id="button-row">
                     <Col className="text-center">
@@ -207,10 +220,19 @@ async function fetchLoadoutData(setData) {
         //     weapons.sidearm.attachments = Object.values(fetchAttachments(weapons.sidearm.weapon, sideAttachCount)).join(", ")
         // }
 
-        let body = {};
+        let body = {
+            left_arm: Math.random() < 0.5 ? fetchBody("arm", game) : defaultItem,
+            legs: Math.random() < 0.5 ? fetchBody("legs", game) : defaultItem,
+            right_arm: Math.random() < 0.5 ? fetchBody("right_arm", game) : defaultItem,
+        };
+        //Update DeliveryCost with body
+        deliveryCost += body.left_arm.cost;
+        deliveryCost += body.legs.cost;
+        deliveryCost += body.right_arm.cost;
+        console.log("body", body);
         let equipment = {};
 
-        setData({ ...defaultData, deliveryCost, randClassName, weapons });
+        setData({ ...defaultData, deliveryCost, randClassName, weapons, body });
     } catch (error: any) {
         console.error(error.message); // Handle errors centrally
     }

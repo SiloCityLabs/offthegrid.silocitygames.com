@@ -2,7 +2,7 @@ export type GeneratorItem = {
   name: string;
   type: string;
   rarity: string;
-  cost?: number;
+  cost: number;
 };
 
 export type Weapon = {
