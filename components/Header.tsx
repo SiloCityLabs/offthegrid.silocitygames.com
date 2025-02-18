@@ -8,6 +8,7 @@ interface HeaderProps {
 
 const defaultNavLinks = [
   { label: "Home", href: "/", target: "" },
+  { label: "Changelog", href: "/changelog", target: "" },
   {
     label: "GitHub",
     href: "https://github.com/SiloCityLabs/offthegrid.silocitygames.com",
