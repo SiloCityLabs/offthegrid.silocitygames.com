@@ -1,12 +1,12 @@
 [
   {
     "title": "Extraction Royale",
-    "text": "Coming Soon",
+    "text": "",
     "variant": "danger",
     "buttons": [
       {
-        "link": "#ExtractionRoyale",
-        "disabled": true,
+        "link": "/generator",
+        "disabled": false,
         "btnText": "Generator"
       }
     ]

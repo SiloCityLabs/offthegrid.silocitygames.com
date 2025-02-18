@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GeneratorCard from "@/components/GeneratorCard";
+import SclCard from "@/components/_silabs/SclCard";
 //json
 import generatorList from "@/json/index/generator-list.json";
 
@@ -30,7 +30,7 @@ export default function Home() {
                 md={6}
                 className="text-center mb-4"
               >
-                <GeneratorCard
+                <SclCard
                   title={card.title}
                   text={card.text}
                   variant={card.variant}

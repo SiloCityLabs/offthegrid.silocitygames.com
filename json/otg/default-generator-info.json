@@ -1,0 +1,68 @@
+{
+    "deliveryCost": 500,
+    "randClassName": "",
+    "weapons": {
+        "primary": {
+            "weapon": {
+                "name": "",
+                "type": "",
+                "game": "",
+                "no_attach": false,
+                "cost": 0,
+                "rarity": ""
+            },
+            "attachments": ""
+        },
+        "secondary": {
+            "weapon": {
+                "name": "",
+                "type": "",
+                "game": "",
+                "no_attach": false,
+                "cost": 0,
+                "rarity": ""
+            },
+            "attachments": ""
+        },
+        "sidearm": {
+            "weapon": {
+                "name": "",
+                "type": "",
+                "game": "",
+                "no_attach": false,
+                "cost": 0,
+                "rarity": ""
+            },
+            "attachments": ""
+        }
+    },
+    "body": {
+        "left_arm": {
+            "name": "",
+            "type": "",
+            "cost": 0
+        },
+        "legs": {
+            "name": "",
+            "type": "",
+            "cost": 0
+        },
+        "right_arm": {
+            "name": "",
+            "type": "",
+            "cost": 0
+        }
+    },
+    "equipment": {
+        "backpack": {
+            "name": "",
+            "type": "",
+            "cost": 0
+        },
+        "consumable": {
+            "name": "",
+            "type": "",
+            "cost": 0
+        }
+    }
+}
