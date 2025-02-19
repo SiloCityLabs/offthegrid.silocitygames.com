@@ -8,24 +8,24 @@ import { GeneratorItem } from "@/types/Generator";
 import raritys from "@/json/generator/raritys/body.json";
 
 const bodyListGetters: Record<string, (game: string) => any> = {
-    arm: getArmList,
-    legs: getLegsList,
-    all: (game: string) =>
-        mergeObjectsWithRekey(getArmList(game), getLegsList(game)),
+  arm: getArmList,
+  legs: getLegsList,
+  all: (game: string) =>
+    mergeObjectsWithRekey(getArmList(game), getLegsList(game)),
 };
 
-export function fetchBody(
-    type: string = "",
-    game: string
-): GeneratorItem {
-    const getBodyList = bodyListGetters[type];
-    const randomRarity = raritys[Math.floor(Math.random() * raritys.length)];
+export function fetchBody(type: string = "", game: string): GeneratorItem {
+  const getBodyList = bodyListGetters[type];
+  const randomRarity = raritys[Math.floor(Math.random() * raritys.length)];
 
-    if (getBodyList) {
-        let data: GeneratorItem = randomListItem(getBodyList(game));
+  if (getBodyList) {
+    let data: GeneratorItem = randomListItem(getBodyList(game));
 
-        return { ...data, rarity: randomRarity.name, cost: randomRarity.cost };
-    } else {
-        return {} as GeneratorItem;
-    }
+    const rarity = data.rarity === "all" ? randomRarity.name : data.rarity;
+    const cost = !data.cost ? randomRarity.cost : data.cost;
+
+    return { ...data, rarity: rarity, cost: cost };
+  } else {
+    return {} as GeneratorItem;
+  }
 }
