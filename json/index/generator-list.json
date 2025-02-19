@@ -8,6 +8,11 @@
         "link": "/generator",
         "disabled": false,
         "btnText": "Generator"
+      },
+      {
+        "link": "/where-we-droppin/extraction-royale",
+        "disabled": false,
+        "btnText": "Where We Droppin"
       }
     ]
   }
