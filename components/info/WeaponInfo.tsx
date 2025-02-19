@@ -99,7 +99,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
               </div>
             ) : attachmentInfo &&
               typeof attachmentInfo === "object" &&
-              Object.keys(attachmentInfo).length > 0 ? ( // Correct condition for object
+              Object.keys(attachmentInfo).length > 0 ? (
               <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
@@ -152,7 +152,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
               </Tabs>
             ) : weaponData?.no_attach_info ? (
               <h3 className="text-center">
-                We have no attachment info for this weapon:(
+                We have no attachment info for this weapon :(
               </h3>
             ) : (
               <h3 className="text-center">No attachments</h3>
