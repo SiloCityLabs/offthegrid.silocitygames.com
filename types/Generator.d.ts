@@ -3,6 +3,7 @@ export type GeneratorItem = {
   type: string;
   rarity: string;
   cost: number;
+  game: string;
 };
 
 export type Weapon = {
@@ -10,6 +11,7 @@ export type Weapon = {
   type: string;
   rarity: string;
   cost: number;
+  game: string;
   no_attach?: boolean;
   no_attach_info?: boolean;
 };

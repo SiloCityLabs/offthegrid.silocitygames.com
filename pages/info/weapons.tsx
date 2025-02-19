@@ -20,13 +20,19 @@ export default function OffTheGridWeapons() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-  const dataKeys = ["name", "type", "rarity", "cost"];
+  const [types, setTypes] = useState<string[]>([]);
+  const dataKeys = ["name", "type", "rarity", "cost", "no_attach_info"];
 
   useEffect(() => {
+    const tmp_types: string[] = [];
     const dataList = getWeapon("off-the-grid");
     //Format data
     for (const key in dataList) {
       const item = dataList[key];
+
+      if (!tmp_types.includes(item.type)) {
+        tmp_types.push(item.type);
+      }
 
       if (item.rarity !== "all") {
         continue;
@@ -42,8 +48,8 @@ export default function OffTheGridWeapons() {
       item.cost = rarityCost.join(", ");
     }
 
+    setTypes(tmp_types);
     setData(dataList);
-
     setIsLoading(false);
   }, []);
 
@@ -69,7 +75,14 @@ export default function OffTheGridWeapons() {
               Weapons
             </h2>
 
-            {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}
+            {!isLoading && (
+              <InfoList
+                data={data}
+                dataKeys={dataKeys}
+                types={types}
+                url="/info/weapon"
+              />
+            )}
           </Col>
         </Row>
       </Container>

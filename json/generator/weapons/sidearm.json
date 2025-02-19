@@ -2,16 +2,22 @@
   {
     "name": "Tap9",
     "type": "sidearm",
-    "rarity": "all"
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
   },
   {
     "name": "Type 227",
     "type": "sidearm",
-    "rarity": "all"
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
   },
   {
     "name": "Kelowna",
     "type": "sidearm",
-    "rarity": "all"
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
   }
 ]
