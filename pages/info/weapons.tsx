@@ -5,11 +5,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import InfoList from "@/components/info/InfoList";
 //Helpers
-import { getBody } from "@/helpers/info/getBody";
+import { getWeapon } from "@/helpers/info/getWeapon";
 //json
-import bodyRarity from "@/json/generator/raritys/body.json";
+import primaryRarity from "@/json/generator/raritys/weapons/primary.json";
+import sidearmRarity from "@/json/generator/raritys/weapons/sidearm.json";
 
-export default function OffTheGridBody() {
+export default function OffTheGridWeapons() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Generator", href: "/generator" },
@@ -22,7 +23,7 @@ export default function OffTheGridBody() {
   const dataKeys = ["name", "type", "rarity", "cost"];
 
   useEffect(() => {
-    const dataList = getBody("off-the-grid");
+    const dataList = getWeapon("off-the-grid");
     //Format data
     for (const key in dataList) {
       const item = dataList[key];
@@ -31,8 +32,10 @@ export default function OffTheGridBody() {
         continue;
       }
 
-      const rarityNames = bodyRarity.map((rarity) => rarity.name);
-      const rarityCost = bodyRarity.map((rarity) => rarity.cost);
+      const rarity = item.type === "sidearm" ? sidearmRarity : primaryRarity;
+
+      const rarityNames = rarity.map((rarity) => rarity.name);
+      const rarityCost = rarity.map((rarity) => rarity.cost);
 
       // Join the names with commas
       item.rarity = rarityNames.join(", ");
@@ -47,12 +50,9 @@ export default function OffTheGridBody() {
   return (
     <>
       <Head>
-        <title>Off The Grid Body</title>
+        <title>Off The Grid Weapons</title>
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="View all body augments in Off The Grid."
-        />
+        <meta name="description" content="View all weapons in Off The Grid." />
         <meta
           name="keywords"
           content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator"
@@ -66,7 +66,7 @@ export default function OffTheGridBody() {
               Off The Grid
               <span className="d-none d-sm-inline-block">&nbsp;-&nbsp;</span>
               <br className="d-block d-sm-none" />
-              Body
+              Weapons
             </h2>
 
             {!isLoading && <InfoList data={data} dataKeys={dataKeys} />}

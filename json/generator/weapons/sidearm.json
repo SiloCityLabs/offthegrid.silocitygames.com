@@ -1,17 +1,17 @@
 [
   {
     "name": "Tap9",
-    "type": "Sidearm",
+    "type": "sidearm",
     "rarity": "all"
   },
   {
     "name": "Type 227",
-    "type": "Sidearm",
+    "type": "sidearm",
     "rarity": "all"
   },
   {
     "name": "Kelowna",
-    "type": "Sidearm",
+    "type": "sidearm",
     "rarity": "all"
   }
 ]
