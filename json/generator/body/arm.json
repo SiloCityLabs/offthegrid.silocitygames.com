@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Starter Arm",
+    "type": "Arm",
+    "rarity": "Common",
+    "game": "off-the-grid",
+    "cost": 200
+  },
+  {
+    "name": "Ghost",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Paralyzer",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Buzzkilla",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Recon Drone",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "SlamFist",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Hookshot",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Ripper",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Kinetic Shield",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Javelina",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Bouncebomber",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Phosphor Fury",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Tripmine",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Slugger",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Skunkpaw",
+    "type": "Arm",
+    "rarity": "all",
+    "game": "off-the-grid"
+  }
+]

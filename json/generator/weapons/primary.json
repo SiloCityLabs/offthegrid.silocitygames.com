@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Terikon",
+    "type": "assault_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Kasper",
+    "type": "assault_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Mavinga",
+    "type": "assault_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "M4 Commodore",
+    "type": "assault_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Vulture",
+    "type": "assault_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Partisan",
+    "type": "assault_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "AZV 100",
+    "type": "smg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Tacoma",
+    "type": "smg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Kite",
+    "type": "smg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Woodpecker",
+    "type": "smg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Kochi",
+    "type": "smg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Squall",
+    "type": "shotgun",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Flenser",
+    "type": "shotgun",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Influencer",
+    "type": "shotgun",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Hawk",
+    "type": "lmg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Boomslang",
+    "type": "lmg",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Proton",
+    "type": "marksman_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Ichnya",
+    "type": "marksman_rifle",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Osprey Legacy",
+    "type": "sniper",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  },
+  {
+    "name": "Kestrel",
+    "type": "sniper",
+    "rarity": "all",
+    "game": "off-the-grid",
+    "no_attach_info": true
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Starter Legs",
+    "type": "Legs",
+    "rarity": "Common",
+    "game": "off-the-grid",
+    "cost": 200
+  },
+  {
+    "name": "Leapers",
+    "type": "Legs",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Thumpers",
+    "type": "Legs",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Hammerheads",
+    "type": "Legs",
+    "rarity": "all",
+    "game": "off-the-grid"
+  },
+  {
+    "name": "Roadrunners",
+    "type": "Legs",
+    "rarity": "all",
+    "game": "off-the-grid"
+  }
+]

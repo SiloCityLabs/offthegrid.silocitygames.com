@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Container, Row, Col } from "react-bootstrap";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GeneratorCard from "@/components/GeneratorCard";
+import SclCard from "@/components/_silabs/SclCard";
 //json
 import generatorList from "@/json/index/generator-list.json";
 
@@ -16,7 +16,7 @@ export default function Home() {
           name="description"
           content="Your hub for all off the grid random class generators past, present and future."
         />
-        <meta name="keywords" content="off the grid" />
+        <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
       </Head>
       <div className="main-container">
         <Header />
@@ -30,13 +30,11 @@ export default function Home() {
                 md={6}
                 className="text-center mb-4"
               >
-                <GeneratorCard
+                <SclCard
                   title={card.title}
                   text={card.text}
                   variant={card.variant}
-                  btn1Text={card.btn1Text}
-                  link={card.link}
-                  disabled={card.disabled}
+                  buttons={card.buttons}
                 />
               </Col>
             ))}

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Simple Backpack",
+    "type": "backpack",
+    "rarity": "Common",
+    "game": "off-the-grid",
+    "cost": 200
+  },
+  {
+    "name": "Simple Backpack",
+    "type": "backpack",
+    "rarity": "Uncommon",
+    "game": "off-the-grid",
+    "cost": 350
+  },
+  {
+    "name": "Soldier Backpack",
+    "type": "backpack",
+    "rarity": "Rare",
+    "game": "off-the-grid",
+    "cost": 900
+  },
+  {
+    "name": "Limb Accelerator Backpack",
+    "type": "backpack",
+    "rarity": "Rare",
+    "game": "off-the-grid",
+    "cost": 900
+  },
+  {
+    "name": "GridShield Backpack",
+    "type": "backpack",
+    "rarity": "Epic",
+    "game": "off-the-grid",
+    "cost": 1500
+  }
+]
