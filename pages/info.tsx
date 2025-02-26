@@ -39,7 +39,7 @@ export default function OffTheGridInfo() {
                 />
                 <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
             </Head>
-            <Header navLinks={navLinks} />
+            <Header isBeta={true} navLinks={navLinks} />
             <Container className="information">
                 <h2 className="text-center mt-3">
                     Off The Grid

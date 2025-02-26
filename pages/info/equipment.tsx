@@ -34,7 +34,7 @@ export default function OffTheGridEquipment() {
                 <meta name="description" content="View all equipment in Off The Grid." />
                 <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
             </Head>
-            <Header navLinks={navLinks} />
+            <Header isBeta={true} navLinks={navLinks} />
             <Container fluid>
                 <Row>
                     <Col>

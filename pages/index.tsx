@@ -19,7 +19,7 @@ export default function Home() {
         <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
       </Head>
       <div className="main-container">
-        <Header />
+        <Header isBeta={true} />
         <Container className="main-content mt-3">
           <Row>
             {generatorList.map((card, index) => (

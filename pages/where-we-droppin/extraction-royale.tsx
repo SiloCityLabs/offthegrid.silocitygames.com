@@ -22,7 +22,7 @@ export default function WhereWeDroppinExtractionRoyale() {
                 />
                 <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
             </Head>
-            <Header navLinks={navLinks} />
+            <Header navLinks={navLinks} isBeta={true} />
             <Container fluid>
                 <Row>
                     <Col>

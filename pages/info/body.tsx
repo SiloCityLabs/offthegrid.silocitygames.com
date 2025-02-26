@@ -58,7 +58,7 @@ export default function OffTheGridBody() {
           content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator"
         />
       </Head>
-      <Header navLinks={navLinks} />
+      <Header isBeta={true} navLinks={navLinks} />
       <Container fluid>
         <Row>
           <Col>
