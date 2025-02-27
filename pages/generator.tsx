@@ -19,9 +19,12 @@ export default function OffTheGridGenerator() {
           name="description"
           content="Spice up your Off The Grid gameplay! Generate unique random loadouts for Off The Grid. Discover new weapons, arms, legs, consumables and backpack combinations."
         />
-        <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
+        <meta
+          name="keywords"
+          content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator"
+        />
       </Head>
-      <Header isBeta={true} navLinks={navLinks} />
+      <Header showBadge={true} navLinks={navLinks} />
       <Container fluid>
         <Row>
           <Col>

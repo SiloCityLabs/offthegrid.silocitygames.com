@@ -10,16 +10,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Off The Grid Random Class Generators</title>
+        <title>
+          {`${process.env.NEXT_PUBLIC_APP_NAME} - Random Class Generators`}
+        </title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
           content="Your hub for all off the grid random class generators past, present and future."
         />
-        <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
+        <meta
+          name="keywords"
+          content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator"
+        />
       </Head>
       <div className="main-container">
-        <Header isBeta={true} />
+        <Header showBadge={true} />
         <Container className="main-content mt-3">
           <Row>
             {generatorList.map((card, index) => (

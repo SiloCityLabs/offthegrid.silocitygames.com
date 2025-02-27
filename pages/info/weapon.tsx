@@ -46,7 +46,7 @@ export default function OffTheGridWeapon() {
           content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator"
         />
       </Head>
-      <Header isBeta={true} className="black-ops" navLinks={navLinks} />
+      <Header showBadge={true} className="black-ops" navLinks={navLinks} />
       <Container fluid>
         <Row>
           <Col>
