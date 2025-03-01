@@ -10,13 +10,16 @@ export default function Changelog() {
   return (
     <>
       <Head>
-        <title>Off The Grid - Call Of Duty Random Class Generator</title>
+        <title>Changelog - Off The Grid Random Class Generator</title>
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="description"
           content="Stay up-to-date on the latest features, bug fixes, and improvements to our Off The Grid random class generator. See what's new and how we're making your loadout experience even better."
         />
-        <meta name="keywords" content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator" />
+        <meta
+          name="keywords"
+          content="off the grid, random class generator, rcg, multiplayer, off the grid random class generator"
+        />
       </Head>
       <Header />
       <Container fluid>
