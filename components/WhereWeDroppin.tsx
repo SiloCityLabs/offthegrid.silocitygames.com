@@ -1,10 +1,13 @@
+'use client';
+
+// --- React ---
 import { useEffect, useState } from 'react';
-//Components
 import { Container, Row, Col, Button, Spinner } from 'react-bootstrap';
+// --- Components ---
 import WheelComponent from 'react-wheel-of-prizes-react19';
-import { LoadingLetters } from '@/components/_silabs/LoadingLetters';
-//Utils
-import { sendEvent } from '@/utils/gtag';
+import { LoadingLetters } from '@silocitypages/ui-core';
+// --- Utils ---
+import { sendEvent } from '@silocitypages/utils';
 
 interface WhereWeDroppinProps {
   map: string;
@@ -28,11 +31,11 @@ function WhereWeDroppin({ map, button_key, ga_label, mapInfo }: WhereWeDroppinPr
   const onFinished = (winner: string) => {
     setSpinResult('');
     setIsSpinning(true);
-    // sendEvent("button_click", {
-    //     button_id: ga_button_id,
-    //     label: ga_label_id,
-    //     category: "OtgWhereWeDroppin",
-    // });
+    sendEvent('button_click', {
+      button_id: ga_button_id,
+      label: ga_label_id,
+      category: 'OtgWhereWeDroppin',
+    });
 
     setTimeout(() => {
       setSpinResult(winner);
@@ -43,11 +46,11 @@ function WhereWeDroppin({ map, button_key, ga_label, mapInfo }: WhereWeDroppinPr
   const handleClick = async () => {
     setSpinResult('');
     setIsSpinning(true);
-    // sendEvent("button_click", {
-    //     button_id: ga_button_id,
-    //     label: ga_label_id,
-    //     category: "OtgWhereWeDroppin",
-    // });
+    sendEvent('button_click', {
+      button_id: ga_button_id,
+      label: ga_label_id,
+      category: 'OtgWhereWeDroppin',
+    });
 
     setTimeout(() => {
       setSpinResult(mapInfo[Math.floor(Math.random() * mapInfo.length)]);
@@ -72,7 +75,7 @@ function WhereWeDroppin({ map, button_key, ga_label, mapInfo }: WhereWeDroppinPr
                     <span className='text-muted fs-6'>
                       <LoadingLetters
                         text={spinResult}
-                        loadingDuration={5000}
+                        loadingDuration={2000}
                         interval={100}
                         className='loading-text'
                       />
