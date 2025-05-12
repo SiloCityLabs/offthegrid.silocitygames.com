@@ -8,8 +8,8 @@ import PageLayout from '@/components/PageLayout';
 import WeaponDisplayClient from '@/components/info/WeaponDisplayClient';
 
 export const metadata: Metadata = {
-  title: 'Weapons',
-  description: 'View all weapons in Off The Grid.',
+  title: 'Weapon',
+  description: 'View information and all available attachments for the weapon in Off The Grid.',
 };
 
 export default function WeaponsInfoPage() {

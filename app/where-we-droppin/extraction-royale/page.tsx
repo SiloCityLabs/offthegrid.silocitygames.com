@@ -15,12 +15,6 @@ export const metadata: Metadata = {
     'Spice up your Off The Grid gameplay! Randomly roll where you should land in off the grid extraction royale.',
 };
 
-const infoCards = [
-  { title: 'Body', text: '', link: '/info/body' },
-  { title: 'Equipment', text: '', link: '/info/equipment' },
-  { title: 'Weapons', text: '', link: '/info/weapons' },
-];
-
 export default function InfoPage() {
   return (
     <PageLayout headerShowBadge={true}>

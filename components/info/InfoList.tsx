@@ -10,7 +10,7 @@ function InfoList({ data, dataKeys, types, url }: InfoListProps) {
   const [itemCount, setItemCount] = useState(Object.values(data).length);
 
   useEffect(() => {
-    const filtered = Object.entries(data).filter(([key, item]) => {
+    const filtered = Object.entries(data).filter(([, item]) => {
       const nameMatch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
 
       const typeMatch = selectedType

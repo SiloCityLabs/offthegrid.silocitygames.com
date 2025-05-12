@@ -195,11 +195,11 @@ async function fetchLoadoutData(setData) {
     let deliveryCost = 500;
     const randClassName = fetchClassName();
     const primaryWeapon = Math.random() < 0.5 ? fetchWeapon('primary', game) : defaultWeapon;
-    const primAttachCount = 1;
-    const secAttachCount = 1;
-    const sideAttachCount = 1;
+    // const primAttachCount = 1;
+    // const secAttachCount = 1;
+    // const sideAttachCount = 1;
 
-    let weapons = {
+    const weapons = {
       primary: { weapon: primaryWeapon, attachments: '' },
       secondary: {
         weapon:
@@ -231,7 +231,7 @@ async function fetchLoadoutData(setData) {
     //     weapons.sidearm.attachments = Object.values(fetchAttachments(weapons.sidearm.weapon, sideAttachCount)).join(", ")
     // }
 
-    let body = {
+    const body = {
       left_arm: Math.random() < 0.5 ? fetchBody('arm', game) : defaultItem,
       legs: Math.random() < 0.5 ? fetchBody('legs', game) : defaultItem,
       right_arm: Math.random() < 0.5 ? fetchBody('arm', game) : defaultItem,
@@ -241,7 +241,7 @@ async function fetchLoadoutData(setData) {
     deliveryCost += body.legs.cost;
     deliveryCost += body.right_arm.cost;
 
-    let equipment = {
+    const equipment = {
       backpack: Math.random() < 0.5 ? fetchEquipment('backpack', game) : defaultItem,
       consumable: Math.random() < 0.5 ? fetchEquipment('consumable', game) : defaultItem,
     };

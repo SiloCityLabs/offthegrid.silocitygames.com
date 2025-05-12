@@ -26,8 +26,6 @@ export default function WeaponDisplayClient({ game }: WeaponDisplayClientProps) 
   useEffect(() => {
     const valueParam = searchParams?.get('value') ?? '';
 
-    console.log('valueParam', valueParam);
-
     if (valueParam === null) {
       router.replace('/404');
       return;

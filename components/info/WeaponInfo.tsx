@@ -38,7 +38,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
       setWeponData(dataList);
 
       if (!dataList.no_attach_info && !dataList.no_attach) {
-        let attachments = fetchAttachments(dataList, -1);
+        const attachments = fetchAttachments(dataList, -1);
 
         setAttachmentInfo(attachments);
         setKey(Object.keys(attachments)[0]);
@@ -48,7 +48,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
     }
 
     setIsLoading(false);
-  }, [value]);
+  }, [value, game]);
 
   function isWeapon(obj: any): obj is Weapon {
     return (

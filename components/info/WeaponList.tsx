@@ -11,13 +11,12 @@ import sidearmRarity from '@/json/generator/raritys/weapons/sidearm.json';
 
 interface ListProps {
   game: string;
-  link?: string;
   dataKeys?: Array<string>;
 }
 
 const defaultDataKeys = ['name', 'type', 'game', 'no_attach'];
 
-export default function WeaponList({ game, link = '', dataKeys = defaultDataKeys }: ListProps) {
+export default function WeaponList({ game, dataKeys = defaultDataKeys }: ListProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
   const [types, setTypes] = useState<string[]>([]);
