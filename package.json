@@ -7,6 +7,8 @@
     "build": "pnpm run build:workspaces && next build",
     "build:turbo": "pnpm run --recursive --if-present build && next build --turbo",
     "build:workspaces": "pnpm run --filter \"./packages/*\" build",
+    "build:app": "next build",
+    "build:app:turbo": "next build --turbo",
     "dev": "next dev",
     "dev:turbo": "next dev --turbo",
     "lint": "pnpm run build:workspaces && next lint",
