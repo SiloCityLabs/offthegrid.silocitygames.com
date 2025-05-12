@@ -5,14 +5,14 @@ import type { Metadata } from 'next';
 // --- Layout ---
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
-import BodyList from '@/components/info/BodyList';
+import WeaponList from '@/components/info/WeaponList';
 
 export const metadata: Metadata = {
-  title: 'Body Augments',
-  description: 'View all body augments in Off The Grid.',
+  title: 'Weapons',
+  description: 'View all weapons in Off The Grid.',
 };
 
-export default function BodyInfoPage() {
+export default function WeaponsInfoPage() {
   return (
     <PageLayout headerShowBadge={true}>
       <Container className='main-content mb-4'>
@@ -22,10 +22,10 @@ export default function BodyInfoPage() {
               Off The Grid
               <span className='d-none d-sm-inline-block'>&nbsp;-&nbsp;</span>
               <br className='d-block d-sm-none' />
-              Body
+              Weapons
             </h2>
 
-            <BodyList game='off-the-grid' />
+            <WeaponList game='off-the-grid' />
           </Col>
         </Row>
       </Container>

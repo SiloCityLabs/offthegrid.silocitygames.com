@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   description: 'View all equipment in Off The Grid.',
 };
 
-export default function InfoPage() {
+export default function EquipmentInfoPage() {
   return (
     <PageLayout headerShowBadge={true}>
-      <Container className='main-content mt-3'>
+      <Container className='main-content mb-4'>
         <Row>
           <Col>
             <h2 className='text-center mt-3'>
