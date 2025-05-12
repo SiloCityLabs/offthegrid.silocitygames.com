@@ -1,9 +1,7 @@
-import otgList from "@/json/generator/equipment/consumable.json";
+import otgList from '@/json/generator/equipment/consumable.json';
 
-const data: Record<string, any> = {
-    "off-the-grid": otgList,
-};
+const data: Record<string, any> = { 'off-the-grid': otgList };
 
 export function getConsumableList(game: string): any {
-    return data[game] || {};
+  return data[game] || {};
 }

@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from 'react-bootstrap';
 
 function Changelog2025() {
   return (
@@ -6,8 +6,7 @@ function Changelog2025() {
       <Row>
         <Col>
           <p>
-            2/20/2025: <a href="generator">Off The Grid:</a>{" "}
-            Generator is now available!
+            2/20/2025: <a href='generator'>Off The Grid:</a> Generator is now available!
           </p>
         </Col>
       </Row>

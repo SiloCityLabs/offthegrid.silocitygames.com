@@ -1,9 +1,7 @@
-import otgList from "@/json/generator/equipment/backpack.json";
+import otgList from '@/json/generator/equipment/backpack.json';
 
-const data: Record<string, any> = {
-    "off-the-grid": otgList,
-};
+const data: Record<string, any> = { 'off-the-grid': otgList };
 
 export function getBackpackList(game: string): any {
-    return data[game] || {};
+  return data[game] || {};
 }

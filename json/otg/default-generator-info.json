@@ -1,73 +1,27 @@
 {
-    "deliveryCost": 500,
-    "randClassName": "",
-    "weapons": {
-        "primary": {
-            "weapon": {
-                "name": "",
-                "type": "",
-                "game": "",
-                "no_attach": false,
-                "cost": 0,
-                "rarity": ""
-            },
-            "attachments": ""
-        },
-        "secondary": {
-            "weapon": {
-                "name": "",
-                "type": "",
-                "game": "",
-                "no_attach": false,
-                "cost": 0,
-                "rarity": ""
-            },
-            "attachments": ""
-        },
-        "sidearm": {
-            "weapon": {
-                "name": "",
-                "type": "",
-                "game": "",
-                "no_attach": false,
-                "cost": 0,
-                "rarity": ""
-            },
-            "attachments": ""
-        }
+  "deliveryCost": 500,
+  "randClassName": "",
+  "weapons": {
+    "primary": {
+      "weapon": { "name": "", "type": "", "game": "", "no_attach": false, "cost": 0, "rarity": "" },
+      "attachments": ""
     },
-    "body": {
-        "left_arm": {
-            "name": "",
-            "type": "",
-            "cost": 0,
-            "rarity": ""
-        },
-        "legs": {
-            "name": "",
-            "type": "",
-            "cost": 0,
-            "rarity": ""
-        },
-        "right_arm": {
-            "name": "",
-            "type": "",
-            "cost": 0,
-            "rarity": ""
-        }
+    "secondary": {
+      "weapon": { "name": "", "type": "", "game": "", "no_attach": false, "cost": 0, "rarity": "" },
+      "attachments": ""
     },
-    "equipment": {
-        "backpack": {
-            "name": "",
-            "type": "",
-            "cost": 0,
-            "rarity": ""
-        },
-        "consumable": {
-            "name": "",
-            "type": "",
-            "cost": 0,
-            "rarity": ""
-        }
+    "sidearm": {
+      "weapon": { "name": "", "type": "", "game": "", "no_attach": false, "cost": 0, "rarity": "" },
+      "attachments": ""
     }
+  },
+  "body": {
+    "left_arm": { "name": "", "type": "", "cost": 0, "rarity": "" },
+    "legs": { "name": "", "type": "", "cost": 0, "rarity": "" },
+    "right_arm": { "name": "", "type": "", "cost": 0, "rarity": "" }
+  },
+  "equipment": {
+    "backpack": { "name": "", "type": "", "cost": 0, "rarity": "" },
+    "consumable": { "name": "", "type": "", "cost": 0, "rarity": "" }
+  }
 }

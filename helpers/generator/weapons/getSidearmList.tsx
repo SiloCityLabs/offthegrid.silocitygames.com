@@ -1,9 +1,7 @@
-import otgList from "@/json/generator/weapons/sidearm.json";
+import otgList from '@/json/generator/weapons/sidearm.json';
 
-const data: Record<string, any> = {
-    "off-the-grid": otgList,
-};
+const data: Record<string, any> = { 'off-the-grid': otgList };
 
 export function getSidearmList(game: string): any {
-    return data[game] || {};
+  return data[game] || {};
 }

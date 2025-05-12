@@ -1,18 +1,6 @@
 [
-  {
-    "name": "Epic",
-    "cost": 500
-  },
-  {
-    "name": "Rare",
-    "cost": 400
-  },
-  {
-    "name": "Uncommon",
-    "cost": 300
-  },
-  {
-    "name": "Common",
-    "cost": 200
-  }
+  { "name": "Epic", "cost": 500 },
+  { "name": "Rare", "cost": 400 },
+  { "name": "Uncommon", "cost": 300 },
+  { "name": "Common", "cost": 200 }
 ]
