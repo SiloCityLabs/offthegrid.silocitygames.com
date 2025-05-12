@@ -3,7 +3,7 @@ name: Prettier Format
 on:
   push:
   pull_request:
-    branches: [main, monorepo, legacy-solo] # Trigger on pull requests targeting the monorepo and legacy-solo branches
+    branches: [main, legacy-solo] # Trigger on pull requests targeting the main and legacy-solo branches
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Needed for auto-commit/PR actions
-      # pull-requests: write # Needed only for the create-pull-request action
+      pull-requests: write # Needed only for the create-pull-request action
 
     steps:
       - name: Checkout code
