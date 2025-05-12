@@ -1,0 +1,65 @@
+name: CI (Lint, Build & Test)
+
+on:
+  push: # Trigger on push to *any* branch
+  pull_request:
+    branches: [main, monorepo, legacy-solo] # Trigger on pull requests targeting these branches
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Enable Corepack (comes with Node.js)
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Prepare/Activate pnpm using the version possibly defined in package.json
+      - name: Prepare pnpm
+        run: corepack prepare pnpm@latest --activate
+
+      - name: Get pnpm store path
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> "$GITHUB_OUTPUT"
+
+      # Cache the store path identified in the previous step
+      - name: Cache pnpm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-node-20-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-node-20-pnpm-
+            ${{ runner.os }}-node-20-
+            ${{ runner.os }}-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build workspace packages (for linting, testing, etc.)
+        run: pnpm run --recursive --if-present build
+
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Type check
+        run: pnpm exec tsc --noEmit
+
+      - name: Build (main application build)
+        run: pnpm run build
+
+      - name: Run Tests and Generate Coverage
+        run: pnpm run test

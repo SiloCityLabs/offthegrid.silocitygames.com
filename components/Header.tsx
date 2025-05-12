@@ -1,8 +1,10 @@
-"use client";
-import { Container, Nav, Navbar, Badge } from "react-bootstrap";
-import React from "react";
+'use client';
 
-interface HeaderProps {
+// --- React ---
+import React from 'react';
+import { Container, Nav, Navbar, Badge } from 'react-bootstrap';
+
+interface Props {
   className?: string;
   navLinks?: { label: string; href: string; target?: string }[];
   darkLinks?: boolean;
@@ -10,67 +12,46 @@ interface HeaderProps {
 }
 
 const defaultNavLinks = [
-  { label: "Home", href: "/", target: "" },
-  { label: "Changelog", href: "/changelog", target: "" },
-  { label: "Feedback", href: "/feedback", target: "" },
-  {
-    label: "GitHub",
-    href: process.env.NEXT_PUBLIC_APP_GITHUB_URL,
-    target: "_blank",
-  },
+  { label: 'Home', href: '/', target: '' },
+  { label: 'Changelog', href: '/changelog', target: '' },
+  { label: 'Feedback', href: '/feedback', target: '' },
+  { label: 'GitHub', href: process.env.NEXT_PUBLIC_APP_GITHUB_URL || '', target: '_blank' },
 ];
 
-function Header(props: HeaderProps) {
-  const {
-    className,
-    navLinks = defaultNavLinks,
-    darkLinks = false,
-    showBadge = false,
-  } = props;
+export default function Header({
+  className,
+  navLinks = defaultNavLinks,
+  darkLinks = false,
+  showBadge = false,
+}: Props) {
+  navLinks = navLinks.length > 0 ? navLinks : defaultNavLinks;
 
   return (
-    <Navbar
-      id="main-header"
-      expand="lg"
-      bg="dark"
-      data-bs-theme="dark"
-      className={`${className}`}
-    >
+    <Navbar id='site-header' expand='lg' bg='dark' data-bs-theme='dark' className={`${className}`}>
       <Container>
-        <Navbar.Brand
-          href="/"
-          className="position-relative d-flex align-items-center"
-        >
+        <Navbar.Brand href='/' className='position-relative d-flex align-items-center'>
           {showBadge && (
-            <Badge
-              bg="warning"
-              text="dark"
-              style={{ fontSize: ".6rem", marginRight: "0.5rem" }}
-            >
+            <Badge bg='warning' text='dark' style={{ fontSize: '.6rem', marginRight: '0.5rem' }}>
               {process.env.NEXT_PUBLIC_NAVBAR_BRAND_BADGE}
             </Badge>
           )}
           <div>
             {process.env.NEXT_PUBLIC_APP_NAME}
             {process.env.NEXT_PUBLIC_NAVBAR_BRAND_SUBTITLE && (
-              <span className="navbar-subtitle">
+              <span className='navbar-subtitle'>
                 {process.env.NEXT_PUBLIC_NAVBAR_BRAND_SUBTITLE}
               </span>
             )}
           </div>
         </Navbar.Brand>
         <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          className={darkLinks ? "black-toggler" : ""}
+          aria-controls='basic-navbar-nav'
+          className={darkLinks ? 'black-toggler' : ''}
         />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav className='me-auto'>
             {navLinks.map((link, index) => (
-              <Nav.Link
-                key={index}
-                href={link.href}
-                target={link.target ? link.target : "_self"}
-              >
+              <Nav.Link key={index} href={link.href} target={link.target ? link.target : '_self'}>
                 {link.label}
               </Nav.Link>
             ))}
@@ -80,5 +61,3 @@ function Header(props: HeaderProps) {
     </Navbar>
   );
 }
-
-export default Header;
