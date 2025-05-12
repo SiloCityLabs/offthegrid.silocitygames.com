@@ -1,9 +1,10 @@
+// --- React ---
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Tabs, Tab, Badge, Table } from 'react-bootstrap';
-//Helpers
+// -- Helpers ---
 import { getWeapon } from '@/helpers/info/getWeapon';
 import { fetchAttachments } from '@/helpers/fetch/fetchAttachments';
-//types
+// --- Types ---
 import { WeaponInfoProps } from '@/types/Info';
 import { Weapon } from '@/types/Generator';
 

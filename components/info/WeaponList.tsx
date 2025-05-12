@@ -21,7 +21,6 @@ export default function WeaponList({ game, link = '', dataKeys = defaultDataKeys
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
   const [types, setTypes] = useState<string[]>([]);
-  const weaponUrl = link ? `/${link}/info/weapon` : `/${game}/info/weapon`;
 
   useEffect(() => {
     const tmp_types: string[] = [];
@@ -54,6 +53,8 @@ export default function WeaponList({ game, link = '', dataKeys = defaultDataKeys
   }, [game]);
 
   return (
-    <>{!isLoading && <InfoList data={data} dataKeys={dataKeys} types={types} url={weaponUrl} />}</>
+    <>
+      {!isLoading && <InfoList data={data} dataKeys={dataKeys} types={types} url='/info/weapon' />}
+    </>
   );
 }
