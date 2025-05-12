@@ -10,7 +10,7 @@ const config = {
     'build/', // Root build folder
     '.pnpm/',
     '.pnpm-store/',
-    // 'packages/', // Only if you truly want to ignore all packages from root linting
+    'packages/', // Only if you truly want to ignore all packages from root linting
   ],
 };
 
