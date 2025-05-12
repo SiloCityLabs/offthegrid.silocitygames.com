@@ -1,0 +1,25 @@
+{
+  "name": "@silocitypages/utils",
+  "version": "1.0.0",
+  "description": "Core utility functions for SiloCityPages projects",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --outDir dist --declaration true",
+    "watch": "tsc --watch --outDir dist --declaration true",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/node": "^22.13.14",
+    "@types/uuid": "^10.0.0"
+  },
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
