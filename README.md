@@ -90,12 +90,12 @@ Before diving deep, ensure your environment is correctly set up:
 - **Code Style**: Update `.prettierrc.mjs` if you have specific code style preferences that differ from the project's defaults.
 - **Linting**: Review the [Linting Configuration](#linting-configuration-important-for-forks) section, especially if you are forking this repository.
 - **PNPM Workspace Configuration (`.npmrc`)**: This project uses PNPM workspaces and primarily manages dependencies at the workspace root. To allow adding new dependencies directly to the root `package.json` using `pnpm add <package-name>` (without requiring the `-w` flag or seeing default PNPM warnings), you need to configure PNPM:
-    - **Create the file**: In the project's root directory (the same location as this README and the root `package.json`), create a file named `.npmrc` if one doesn't already exist.
-    - **Add the configuration**: Open the `.npmrc` file and add the following line:
-      ```
-      ignore-workspace-root-check=true
-      ```
-    - This setting tells PNPM to bypass the check that normally discourages adding dependencies directly to the workspace root, aligning PNPM's behavior with this project's dependency management approach.
+  - **Create the file**: In the project's root directory (the same location as this README and the root `package.json`), create a file named `.npmrc` if one doesn't already exist.
+  - **Add the configuration**: Open the `.npmrc` file and add the following line:
+    ```
+    ignore-workspace-root-check=true
+    ```
+  - This setting tells PNPM to bypass the check that normally discourages adding dependencies directly to the workspace root, aligning PNPM's behavior with this project's dependency management approach.
 
 ## Configuration Deep Dive
 
