@@ -1,6 +1,8 @@
-import { mergeObjectsWithRekey } from '@/helpers/_silabs/mergeObjectsWithRekey';
+// --- Helpers ---
+import { mergeObjectsWithRekey } from '@silocitypages/utils';
 import { getBackpackList } from '@/helpers/generator/equipment/getBackpackList';
 import { getConsumableList } from '@/helpers/generator/equipment/getConsumableList';
+// --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 
 export function getEquipment(

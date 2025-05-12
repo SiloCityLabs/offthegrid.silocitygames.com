@@ -1,6 +1,8 @@
-import { mergeObjectsWithRekey } from '@/helpers/_silabs/mergeObjectsWithRekey';
+// --- Helpers ---
+import { mergeObjectsWithRekey } from '@silocitypages/utils';
 import { getPrimaryList } from '@/helpers/generator/weapons/getPrimaryList';
 import { getSidearmList } from '@/helpers/generator/weapons/getSidearmList';
+// --- Types ---
 import { Weapon } from '@/types/Generator';
 
 export function getWeapon(
