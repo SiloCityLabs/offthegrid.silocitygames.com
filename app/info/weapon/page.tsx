@@ -1,4 +1,5 @@
 // --- React ---
+import { Suspense } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 // --- Next ---
 import type { Metadata } from 'next';
@@ -17,9 +18,14 @@ export default function WeaponsInfoPage() {
     <PageLayout headerShowBadge={true}>
       <Container className='main-content mb-4'>
         <Row>
-          <Col>
-            <WeaponDisplayClient game='off-the-grid' />
-          </Col>
+          <Suspense
+            fallback={
+              <Col>
+                <p className='text-center'>Loading page...</p>
+              </Col>
+            }>
+            <WeaponDisplayClient game={'off-the-grid'} />
+          </Suspense>
         </Row>
       </Container>
     </PageLayout>
