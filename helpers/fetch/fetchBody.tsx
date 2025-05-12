@@ -1,10 +1,10 @@
+// --- Helpers ---
+import { randomListItem, mergeObjectsWithRekey } from '@silocitypages/utils';
 import { getArmList } from '@/helpers/generator/body/getArmList';
 import { getLegsList } from '@/helpers/generator/body/getLegsList';
-import { randomListItem } from '@/helpers/_silabs/randomListItem';
-import { mergeObjectsWithRekey } from '@/helpers/_silabs/mergeObjectsWithRekey';
-//Types
+// --- Types ---
 import { GeneratorItem } from '@/types/Generator';
-//json
+// --- Data ---
 import raritys from '@/json/generator/raritys/body.json';
 
 const bodyListGetters: Record<string, (game: string) => any> = {

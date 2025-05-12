@@ -1,18 +1,21 @@
+'use client';
+
+// --- React ---
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import SclPlaceholder from '@/components/_silabs/SclPlaceholder';
+// --- Components ---
 import ClassName from '@/components/ClassName';
 import SimpleGeneratorView from '@/components/generators/SimpleGeneratorView';
-//Helpers
+// --- Helpers ---
 import { scrollToTop } from '@/helpers/scrollToTop';
 import { fetchWeapon } from '@/helpers/fetch/fetchWeapon';
 // import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
 import { fetchBody } from '@/helpers/fetch/fetchBody';
 import { fetchClassName } from '@/helpers/fetch/fetchClassName';
 import { fetchEquipment } from '@/helpers/fetch/fetchEquipment';
-//Utils
-import { sendEvent } from '@/utils/gtag';
-//json
+// --- Utils ---
+import { sendEvent } from '@silocitypages/utils';
+// --- Data ---
 import defaultData from '@/json/otg/default-generator-info.json';
 
 const defaultWeapon = { name: '', type: '', game: '', no_attach: false, cost: 0 };
@@ -213,17 +216,17 @@ async function fetchLoadoutData(setData) {
     deliveryCost += weapons.secondary.weapon.cost;
     deliveryCost += weapons.sidearm.weapon.cost;
 
-    // //Get Primary Attachments
+    //Get Primary Attachments
     // if (!weapons.primary.weapon?.no_attach) {
     //     weapons.primary.attachments = Object.values(fetchAttachments(weapons.primary.weapon, primAttachCount)).join(", ")
     // }
 
-    // //Get Secondary Attachments
+    //Get Secondary Attachments
     // if (!weapons.secondary.weapon?.no_attach) {
     //     weapons.secondary.attachments = Object.values(fetchAttachments(weapons.secondary.weapon, secAttachCount)).join(", ")
     // }
 
-    // //Get Sidearm Attachments
+    //Get Sidearm Attachments
     // if (!weapons.sidearm.weapon?.no_attach) {
     //     weapons.sidearm.attachments = Object.values(fetchAttachments(weapons.sidearm.weapon, sideAttachCount)).join(", ")
     // }

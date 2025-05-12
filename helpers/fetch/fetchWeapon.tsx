@@ -1,10 +1,10 @@
+// --- Helpers ---
+import { randomListItem, mergeObjectsWithRekey } from '@silocitypages/utils';
 import { getPrimaryList } from '@/helpers/generator/weapons/getPrimaryList';
 import { getSidearmList } from '@/helpers/generator/weapons/getSidearmList';
-import { randomListItem } from '@/helpers/_silabs/randomListItem';
-import { mergeObjectsWithRekey } from '@/helpers/_silabs/mergeObjectsWithRekey';
-//Types
+// --- Types ---
 import { Weapon } from '@/types/Generator';
-//json
+// --- Data ---
 import primaryRaritys from '@/json/generator/raritys/weapons/primary.json';
 import sidearmRaritys from '@/json/generator/raritys/weapons/sidearm.json';
 

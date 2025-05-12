@@ -1,6 +1,8 @@
+// --- Helpers ---
+import { randomListItem } from '@silocitypages/utils';
+// --- Data ---
 import adList from '@/json/otg/adjectives.json';
 import nounList from '@/json/otg/nouns.json';
-import { randomListItem } from '../_silabs/randomListItem';
 
 export function fetchClassName(): string {
   let adjective = randomListItem(adList);

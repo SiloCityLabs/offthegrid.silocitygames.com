@@ -8,7 +8,7 @@ import PageLayout from '@/components/PageLayout';
 import { SclCard } from '@silocitypages/ui-core';
 
 export const metadata: Metadata = {
-  title: 'Off The Grid Loadout Information',
+  title: 'Loadout Information',
   description:
     'Loadout Information for Off The Grid. Checkout all the weapons, arms, legs, consumables and backpack combinations.',
 };

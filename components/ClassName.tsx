@@ -1,5 +1,7 @@
+// --- React ---
 import React from 'react';
-import SclPlaceholder from '@/components/_silabs/SclPlaceholder';
+// --- Helpers ---
+import { SclPlaceholder } from '@silocitypages/ui-core';
 
 const ClassName = ({ isGenerating, value }) => {
   return (

@@ -1,8 +1,8 @@
+// --- Helpers ---
+import { randomListItem, mergeObjectsWithRekey } from '@silocitypages/utils';
 import { getBackpackList } from '@/helpers/generator/equipment/getBackpackList';
 import { getConsumableList } from '@/helpers/generator/equipment/getConsumableList';
-import { randomListItem } from '@/helpers/_silabs/randomListItem';
-import { mergeObjectsWithRekey } from '@/helpers/_silabs/mergeObjectsWithRekey';
-//Types
+// --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 
 const equipmentListGetters: Record<string, (game: string) => any> = {
