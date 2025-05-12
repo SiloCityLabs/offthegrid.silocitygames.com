@@ -9,7 +9,7 @@ import generatorList from '@/json/index/generator-list.json';
 
 export default function HomePage() {
   return (
-    <PageLayout>
+    <PageLayout headerShowBadge={true}>
       <Container className='main-content mt-3'>
         <Row>
           {generatorList.map((card, index) => (
