@@ -4,7 +4,7 @@
 import React from 'react';
 // --- Components ---
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import OtgFooter from '@/components/OtgFooter';
 
 interface NavLink {
   label: string;
@@ -44,7 +44,7 @@ export default function PageLayout({
         />
       )}
       <main className='main-content'>{children}</main>
-      {showFooter && <Footer className={footerClassName} />}
+      {showFooter && <OtgFooter />}
     </div>
   );
 }

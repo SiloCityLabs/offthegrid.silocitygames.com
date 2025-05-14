@@ -1,7 +1,141 @@
+:root {
+  --otg-red: #ff003a;
+  --otg-white: #ffffff;
+  --otg-light-gray: #c8c8cd;
+  --otg-dark-gray: #191919;
+  --otg-text: #191919;
+}
+
 #site-header {
-  background: #dc3545 !important;
+  background: var(--otg-red) !important;
 }
 
 #site-header a {
   color: white !important;
+}
+
+/* --- OTG Footer Styles --- */
+.off-the-grid-footer {
+  background-color: var(--otg-dark-gray);
+  color: var(--otg-light-gray);
+  margin-top: auto;
+  border-top: 4px solid var(--otg-red);
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  opacity: 0.8;
+}
+
+/* Style the navigation links in the footer */
+.footer-link {
+  color: var(--otg-light-gray) !important;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition:
+    color 0.2s ease-in-out,
+    text-decoration 0.2s ease-in-out;
+}
+
+/* Hover/Focus styles for footer links */
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--otg-red) !important;
+  text-decoration: none;
+}
+
+/* Ensure Nav items don't add extra bullet points or styles */
+.footer-nav .nav-item {
+  list-style: none;
+}
+
+.copyright-section a {
+  color: var(--otg-red) !important;
+  font-size: 0.9rem;
+  transition:
+    color 0.2s ease-in-out,
+    text-decoration 0.2s ease-in-out;
+}
+
+/* OTG Red Button - .btn-otg */
+.btn-otg {
+  background-color: var(--otg-red);
+  border-color: var(--otg-red);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Hover state: Darken the background slightly */
+.btn-otg:hover {
+  background-color: #d60030;
+  border-color: #cc002e;
+  color: #ffffff;
+}
+
+/* Focus state: Adjust background, border, and add a custom box-shadow */
+.btn-otg:focus,
+.btn-otg.focus {
+  background-color: #d60030;
+  border-color: #cc002e;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 58, 0.5);
+}
+
+/* Active (pressed) state: Make it a bit darker */
+.btn-otg:active,
+.btn-otg.active {
+  background-color: #b8002a;
+  border-color: #ad0028;
+  color: #ffffff;
+}
+
+/* Disabled state: Keep colors, rely on Bootstrap's .disabled opacity */
+.btn-otg:disabled,
+.btn-otg.disabled {
+  background-color: var(--otg-red);
+  border-color: var(--otg-red);
+  color: #ffffff;
+}
+
+/* Base style for the custom dark button */
+.btn-otg-dark {
+  background-color: var(--otg-dark-gray);
+  color: var(--otg-red);
+  border-color: var(--otg-red);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Hover state: Invert to red background with white text */
+.btn-otg-dark:hover {
+  background-color: var(--otg-red);
+  color: #ffffff;
+  border-color: var(--otg-red);
+}
+
+/* Focus state: Similar to hover, with a red glow */
+.btn-otg-dark:focus,
+.btn-otg-dark.focus {
+  background-color: var(--otg-red);
+  color: #ffffff;
+  border-color: var(--otg-red);
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 58, 0.5);
+}
+
+/* Active (pressed) state: Darker red background, white text */
+.btn-otg-dark:active,
+.btn-otg-dark.active {
+  background-color: #d60030;
+  color: #ffffff;
+  border-color: #cc002e;
+}
+
+/* Disabled state: Revert to base dark appearance, rely on Bootstrap's opacity */
+.btn-otg-dark:disabled,
+.btn-otg-dark.disabled {
+  background-color: var(--otg-dark-gray);
+  color: var(--otg-red);
+  border-color: var(--otg-red);
 }
