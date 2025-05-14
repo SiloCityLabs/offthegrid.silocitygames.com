@@ -85,8 +85,8 @@ Before diving deep, ensure your environment is correctly set up:
 - **`package.json`**: Review and update the root `package.json` with your project's specific details (name, author, repository URL, etc.).
 - **Public Assets & SEO**:
   - `public/manifest.json`: Update the Web App Manifest with your site's name, short name, icons, and theme colors. This is crucial for PWA behavior.
-  - `public/sitemap.xml`: Modify the sitemap to reflect your website's page structure. This helps search engines crawl your site effectively.
-  - `public/robots.txt`: Adjust `robots.txt` if you need to control how search engine crawlers access parts of your site.
+  - `sitemap.xml`: is automatically generated. (See `next-sitemap.config.js`)
+  - `robots.txt`: : is automatically generated. (See `next-sitemap.config.js`)
 - **Code Style**: Update `.prettierrc.mjs` if you have specific code style preferences that differ from the project's defaults.
 - **Linting**: Review the [Linting Configuration](#linting-configuration-important-for-forks) section, especially if you are forking this repository.
 - **PNPM Workspace Configuration (`.npmrc`)**: This project uses PNPM workspaces and primarily manages dependencies at the workspace root. To allow adding new dependencies directly to the root `package.json` using `pnpm add <package-name>` (without requiring the `-w` flag or seeing default PNPM warnings), you need to configure PNPM:
@@ -109,7 +109,8 @@ Understanding the key configuration files will help you tailor SiloCityPages to 
 - **`.env.local`**: Used for defining environment variables for your local development. Values here override those in `.env.example` and are not committed to Git. Ensure sensitive keys are stored securely.
 - **`tsconfig.json`**: TypeScript compiler options for the project. It defines how TypeScript files are transpiled into JavaScript, including target ECMAScript version, module system, JSX processing, and path aliases.
 - **`public/manifest.json`**: Defines your Progressive Web App (PWA) settings. It allows users to add your website to their home screen, and specifies icons, theme colors, and display mode.
-- **`public/sitemap.xml`**: Provides a map of your site's pages to search engines. Essential for SEO, ensure it's updated as you add or remove pages.
+- **`out/sitemap.xml`**: It's automatically generated during the build process by the next-sitemap package. Configuration for these can be found in `next-sitemap.config.js`. These files provide a map of your site's pages to search engines and control crawler access, which is essential for SEO.
+- **`next-sitemap.config.js`**: This file configures the next-sitemap package, which automatically generates sitemap.xml and robots.txt files during the build process. You can customize options such as your site's URL, which paths to include or exclude, and robots.txt rules here.
 
 ## Monorepo Structure
 
