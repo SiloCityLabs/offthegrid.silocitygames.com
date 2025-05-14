@@ -71,7 +71,7 @@ Contributions are welcome! Whether it's bug reports, feature requests, or direct
 - **Found a bug?** Please submit a [Bug Report](https://github.com/SiloCityLabs/offthegrid.silocitygames.com/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBUG%5D).
 - **Have an idea for a new feature?** Submit a [Feature Request](https://github.com/SiloCityLabs/offthegrid.silocitygames.com/issues/new?assignees=&labels=enhancement&template=feature-request-template.md&title=%5BFEATURE%5D).
 - **Want to help with game data?**
-  - **Add Missing Weapon Attachments:** If you notice a weapon is missing attachments in the [Info Hub](https://offthegrid.silocitygames.com/info/weapons), you can help us add them! Please use the [Manage Weapon Attachments Template](https://github.com/SiloCityLabs/offthegrid.silocitygames.com/issues/new?template=manage-weapon-attachments-template.md&title=%5BATTACHMENT%5D%3A+Manage+Attachments+for+WEAPON_NAME) to submit the details.
+  - **Add Missing Weapon Attachments:** If you notice a weapon is missing attachments in the [Info Hub](https://offthegrid.silocitygames.com/info/weapons), you can help us add them! Please use the [Manage Weapon Attachments Template](https://github.com/SiloCityLabs/offthegrid.silocitygames.com/issues/new?template=manage-weapon-attachments-template.md) to submit the details.
 - **Want to contribute code?**
   1.  Fork the Project
   2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
