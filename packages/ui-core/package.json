@@ -10,10 +10,10 @@
   ],
   "scripts": {
     "build": "pnpm run build:ts && pnpm run build:copy-styles",
-    "build:ts": "tsc --outDir dist",
+    "build:ts": "tsc",
     "build:copy-styles": "cpx \"src/styles/**/*.css\" dist/styles",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist",
-    "watch": "tsc --watch --outDir dist"
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch": "tsc --watch"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
