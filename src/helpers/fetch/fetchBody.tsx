@@ -18,7 +18,7 @@ export function fetchBody(type: string = '', game: string): GeneratorItem {
   const randomRarity = raritys[Math.floor(Math.random() * raritys.length)];
 
   if (getBodyList) {
-    let data: GeneratorItem = randomListItem(getBodyList(game));
+    const data: GeneratorItem = randomListItem(getBodyList(game));
 
     const rarity = data.rarity === 'all' ? randomRarity.name : data.rarity;
     const cost = !data.cost ? randomRarity.cost : data.cost;

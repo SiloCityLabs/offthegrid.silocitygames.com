@@ -5,10 +5,7 @@ import { getConsumableList } from '@/helpers/generator/equipment/getConsumableLi
 // --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 
-export function getEquipment(
-  game: string = 'all',
-  value: string = ''
-): GeneratorItem | Record<string, GeneratorItem> {
+export function getEquipment(game: string = 'all'): GeneratorItem | Record<string, GeneratorItem> {
   const data = mergeObjectsWithRekey(getBackpackList(game), getConsumableList(game)) as Record<
     string,
     GeneratorItem

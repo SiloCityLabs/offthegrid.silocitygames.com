@@ -6,7 +6,7 @@ import { getWeapon } from '@/helpers/info/getWeapon';
 import { fetchAttachments } from '@/helpers/fetch/fetchAttachments';
 // --- Types ---
 import { WeaponInfoProps } from '@/types/Info';
-import { Weapon } from '@/types/Generator';
+import { GeneratorItem } from '@/types/Generator';
 
 const titleMap = {
   name: 'Name',
@@ -21,7 +21,7 @@ const titleMap = {
 
 function WeaponInfo({ value, game }: WeaponInfoProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const [weaponData, setWeponData] = useState<Weapon>({
+  const [weaponData, setWeponData] = useState<GeneratorItem>({
     name: '',
     type: '',
     rarity: '',
@@ -50,7 +50,7 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
     setIsLoading(false);
   }, [value, game]);
 
-  function isWeapon(obj: any): obj is Weapon {
+  function isWeapon(obj: any): obj is GeneratorItem {
     return (
       typeof obj === 'object' &&
       obj !== null &&

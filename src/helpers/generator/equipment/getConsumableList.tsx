@@ -1,7 +1,10 @@
+// --- Data ---
 import otgList from '@/json/generator/equipment/consumable.json';
+// --- Types ---
+import { GeneratorItem } from '@/types/Generator';
 
-const data: Record<string, any> = { 'off-the-grid': otgList };
+const data: Record<string, GeneratorItem[]> = { 'off-the-grid': otgList };
 
-export function getConsumableList(game: string): any {
+export function getConsumableList(game: string): GeneratorItem[] {
   return data[game] || {};
 }

@@ -15,12 +15,12 @@ export function fetchEquipment(type: string = '', game: string): GeneratorItem {
   const getEquipmentList = equipmentListGetters[type];
 
   if (getEquipmentList) {
-    let data: GeneratorItem = randomListItem(getEquipmentList(game));
+    const data: GeneratorItem = randomListItem(getEquipmentList(game));
 
     if (data.name === 'Armor Kit Gen I') {
       const count = Math.floor(Math.random() * 3) + 1;
       const name = `Armor Kit Gen I x${count}`;
-      const cost = data.cost * count;
+      const cost = (data?.cost ?? 0) * count;
 
       return { ...data, name: name, cost: cost };
     }

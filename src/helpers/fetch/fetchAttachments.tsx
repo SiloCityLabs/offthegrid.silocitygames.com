@@ -1,9 +1,9 @@
 //Types
-import { Weapon } from '@/types/Generator';
+import { GeneratorItem } from '@/types/Generator';
 
 const attachmentGetters: Record<string, (type: string, gun: string, count: number) => any> = {};
 
-export function fetchAttachments(weapon: Weapon, count: number = 1): any {
+export function fetchAttachments(weapon: GeneratorItem, count: number = 1): any {
   if (weapon?.no_attach_info) {
     return [`No attachment info. Randomly select ${count}.`];
   }

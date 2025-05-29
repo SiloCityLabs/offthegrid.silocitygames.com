@@ -3,7 +3,7 @@ import { randomListItem, mergeObjectsWithRekey } from '@silocitypages/utils';
 import { getPrimaryList } from '@/helpers/generator/weapons/getPrimaryList';
 import { getSidearmList } from '@/helpers/generator/weapons/getSidearmList';
 // --- Types ---
-import { Weapon } from '@/types/Generator';
+import { GeneratorItem } from '@/types/Generator';
 // --- Data ---
 import primaryRaritys from '@/json/generator/raritys/weapons/primary.json';
 import sidearmRaritys from '@/json/generator/raritys/weapons/sidearm.json';
@@ -21,14 +21,14 @@ export function fetchWeapon(
   game: string,
   excludeWeapon: string = '',
   needsAttachments: boolean = false
-): Weapon {
+): GeneratorItem {
   const getWeaponList = weaponListGetters[type];
   const raritys = rarityListGetters[type];
   const randomRarity = raritys[Math.floor(Math.random() * raritys.length)];
   let rollAgain = false;
 
   if (getWeaponList) {
-    let data: Weapon;
+    let data: GeneratorItem;
 
     do {
       rollAgain = false;
@@ -42,6 +42,6 @@ export function fetchWeapon(
 
     return { ...data, rarity: randomRarity.name, cost: randomRarity.cost };
   } else {
-    return {} as Weapon;
+    return {} as GeneratorItem;
   }
 }

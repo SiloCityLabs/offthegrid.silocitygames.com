@@ -1,7 +1,10 @@
+// --- Data ---
 import otgList from '@/json/generator/weapons/primary.json';
+// --- Types ---
+import { GeneratorItem } from '@/types/Generator';
 
-const data: Record<string, any> = { 'off-the-grid': otgList };
+const data: Record<string, GeneratorItem[]> = { 'off-the-grid': otgList };
 
-export function getPrimaryList(game: string): any {
+export function getPrimaryList(game: string): GeneratorItem[] {
   return data[game] || {};
 }
