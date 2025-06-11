@@ -1,15 +1,32 @@
 [
   {
-    "title": "Extraction Royale",
-    "text": "",
+    "name": "Off The Grid: Generator",
+    "description": "Step out of your comfort zone. Generate a completely random loadout, from weapons and cyberlimbs to equipment and a unique class name. Perfect for a new challenge or when you're feeling indecisive.",
+    "variant": "otg",
+    "buttons": [{ "link": "/generator", "disabled": false, "btnText": "Generator" }]
+  },
+  {
+    "name": "Where We Droppin' (Extraction Royale)",
+    "description": "Settle the squad's debate once and for all. Let fate decide your next drop point in Extraction Royale for a new strategic challenge every time.",
     "variant": "otg",
     "buttons": [
-      { "link": "/generator", "disabled": false, "btnText": "Generator" },
       {
         "link": "/where-we-droppin/extraction-royale",
         "disabled": false,
         "btnText": "Where We Droppin"
       }
     ]
+  },
+  {
+    "name": "Info Hub",
+    "description": "Knowledge is power. Dive into a comprehensive database of in-game items. Browse detailed information and stats for weapons, body augments, and equipment.",
+    "variant": "otg",
+    "buttons": [{ "link": "/info", "disabled": false, "btnText": "Browse the Database" }]
+  },
+  {
+    "name": "More Tools on the Horizon!",
+    "description": "The Field Kit is an ever-evolving project. We're always working on new tools and features to enhance your Off The Grid experience. Stay tuned for what's next!",
+    "variant": "otg",
+    "buttons": [{ "link": "/", "disabled": true, "btnText": "Coming Soon..." }]
   }
 ]
