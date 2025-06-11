@@ -27,6 +27,6 @@
     "name": "More Tools on the Horizon!",
     "description": "The Field Kit is an ever-evolving project. We're always working on new tools and features to enhance your Off The Grid experience. Stay tuned for what's next!",
     "variant": "otg",
-    "buttons": [{ "link": "/", "disabled": true, "btnText": "Coming Soon..." }]
+    "buttons": [{ "link": "", "disabled": true, "btnText": "Coming Soon..." }]
   }
 ]

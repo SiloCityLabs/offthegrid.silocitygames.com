@@ -173,3 +173,23 @@
   color: var(--otg-red);
   border-color: var(--otg-red);
 }
+
+/* Create the custom button class ".btn-outline-otg" */
+.btn-outline-otg {
+  /* Set text and border color to your variable */
+  --bs-btn-color: var(--otg-red);
+  --bs-btn-border-color: var(--otg-red);
+
+  /* Set the hover/active state colors */
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--otg-red);
+  --bs-btn-hover-border-color: var(--otg-red);
+
+  /* Set the focus shadow color */
+  --bs-btn-focus-shadow-rgb: 217, 83, 79; /* The RGB values of --otg-red */
+
+  /* Set the active state styles */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--otg-red);
+  --bs-btn-active-border-color: var(--otg-red);
+}

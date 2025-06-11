@@ -170,7 +170,7 @@ function OffTheGridLoadout() {
         <Row id='button-row'>
           <Col className='text-center'>
             <Button
-              variant='danger'
+              variant='otg'
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}>
               {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}

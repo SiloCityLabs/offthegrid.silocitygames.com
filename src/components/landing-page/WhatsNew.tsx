@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const WhatsNew = () => {
   return (
-    <Container className='py-5 bg-light'>
+    <Container className='py-5'>
       <h2 className='text-center mb-4'>Latest Intel</h2>
       <div className='text-center'>
         <p>

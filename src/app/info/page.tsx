@@ -35,7 +35,7 @@ export default function InfoPage() {
               <SclCard
                 title={card.title}
                 text={card.text}
-                variant='danger'
+                variant='otg'
                 buttons={[{ link: card.link, disabled: false, btnText: 'View' }]}
               />
             </Col>
