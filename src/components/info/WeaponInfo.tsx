@@ -50,13 +50,20 @@ function WeaponInfo({ value, game }: WeaponInfoProps) {
     setIsLoading(false);
   }, [value, game]);
 
-  function isWeapon(obj: any): obj is GeneratorItem {
+  function isWeapon(obj: unknown): obj is GeneratorItem {
+    // Validate that obj is a non-null object
+    if (typeof obj !== 'object' || obj === null) {
+      return false;
+    }
+
+    // Cast the object to a record to safely check for properties
+    const potentialWeapon = obj as Record<string, unknown>;
+
+    // Check for the existence and type of the required properties
     return (
-      typeof obj === 'object' &&
-      obj !== null &&
-      typeof obj.name === 'string' &&
-      typeof obj.type === 'string' &&
-      typeof obj.game === 'string'
+      typeof potentialWeapon.name === 'string' &&
+      typeof potentialWeapon.type === 'string' &&
+      typeof potentialWeapon.game === 'string'
     );
   }
 

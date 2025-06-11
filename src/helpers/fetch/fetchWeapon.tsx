@@ -1,20 +1,23 @@
 // --- Helpers ---
-import { randomListItem, mergeObjectsWithRekey } from '@silocitypages/utils';
+import { randomListItem } from '@silocitypages/utils';
 import { getPrimaryList } from '@/helpers/generator/weapons/getPrimaryList';
 import { getSidearmList } from '@/helpers/generator/weapons/getSidearmList';
 // --- Types ---
-import { GeneratorItem } from '@/types/Generator';
+import { GeneratorItem, Rarity } from '@/types/Generator';
 // --- Data ---
 import primaryRaritys from '@/json/generator/raritys/weapons/primary.json';
 import sidearmRaritys from '@/json/generator/raritys/weapons/sidearm.json';
 
-const weaponListGetters: Record<string, (game: string) => any> = {
+const weaponListGetters: Record<string, (game: string) => GeneratorItem[]> = {
   primary: getPrimaryList,
   sidearm: getSidearmList,
-  all: (game: string) => mergeObjectsWithRekey(getPrimaryList(game), getSidearmList(game)),
+  all: (game: string) => [...getPrimaryList(game), ...getSidearmList(game)],
 };
 
-const rarityListGetters: Record<string, any> = { primary: primaryRaritys, sidearm: sidearmRaritys };
+const rarityListGetters: Record<string, Rarity[]> = {
+  primary: primaryRaritys,
+  sidearm: sidearmRaritys,
+};
 
 export function fetchWeapon(
   type: string = '',

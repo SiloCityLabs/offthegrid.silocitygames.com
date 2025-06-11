@@ -1,4 +1,4 @@
-import { Card, Button, Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 // --- Components ---
 import { SclCard } from '@silocitypages/ui-core';
 // --- Data ---

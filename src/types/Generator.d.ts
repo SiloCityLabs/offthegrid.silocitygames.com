@@ -7,3 +7,5 @@ export type GeneratorItem = {
   no_attach?: boolean;
   no_attach_info?: boolean;
 };
+
+export type Rarity = { name: string; cost: number };

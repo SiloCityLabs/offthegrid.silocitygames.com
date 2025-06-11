@@ -26,6 +26,7 @@ interface PageLayoutProps {
 export default function PageLayout({
   children,
   headerClassName = '',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   footerClassName = '',
   navLinks = [],
   showHeader = true,

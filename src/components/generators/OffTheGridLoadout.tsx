@@ -212,9 +212,9 @@ async function fetchLoadoutData(setData) {
       },
     };
     //Update DeliveryCost with weapons
-    deliveryCost += weapons.primary.weapon.cost;
-    deliveryCost += weapons.secondary.weapon.cost;
-    deliveryCost += weapons.sidearm.weapon.cost;
+    deliveryCost += weapons?.primary.weapon.cost || 0;
+    deliveryCost += weapons?.secondary.weapon.cost || 0;
+    deliveryCost += weapons?.sidearm.weapon.cost || 0;
 
     //Get Primary Attachments
     // if (!weapons.primary.weapon?.no_attach) {
@@ -237,20 +237,24 @@ async function fetchLoadoutData(setData) {
       right_arm: Math.random() < 0.5 ? fetchBody('arm', game) : defaultItem,
     };
     //Update DeliveryCost with body
-    deliveryCost += body.left_arm.cost;
-    deliveryCost += body.legs.cost;
-    deliveryCost += body.right_arm.cost;
+    deliveryCost += body?.left_arm.cost || 0;
+    deliveryCost += body?.legs.cost || 0;
+    deliveryCost += body?.right_arm.cost || 0;
 
     const equipment = {
       backpack: Math.random() < 0.5 ? fetchEquipment('backpack', game) : defaultItem,
       consumable: Math.random() < 0.5 ? fetchEquipment('consumable', game) : defaultItem,
     };
-    deliveryCost += equipment.backpack.cost;
-    deliveryCost += equipment.consumable.cost;
+    deliveryCost += equipment?.backpack.cost || 0;
+    deliveryCost += equipment?.consumable.cost || 0;
 
     setData({ ...defaultData, deliveryCost, randClassName, weapons, body, equipment });
-  } catch (error: any) {
-    console.error(error.message); // Handle errors centrally
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    } else {
+      console.error('An unexpected error occurred:', error);
+    }
   }
 }
 

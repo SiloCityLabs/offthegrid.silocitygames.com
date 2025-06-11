@@ -1,5 +1,5 @@
 // --- Helpers ---
-import { randomListItem, mergeObjectsWithRekey } from '@silocitypages/utils';
+import { randomListItem } from '@silocitypages/utils';
 import { getArmList } from '@/helpers/generator/body/getArmList';
 import { getLegsList } from '@/helpers/generator/body/getLegsList';
 // --- Types ---
@@ -7,10 +7,10 @@ import { GeneratorItem } from '@/types/Generator';
 // --- Data ---
 import raritys from '@/json/generator/raritys/body.json';
 
-const bodyListGetters: Record<string, (game: string) => any> = {
+const bodyListGetters: Record<string, (game: string) => GeneratorItem[]> = {
   arm: getArmList,
   legs: getLegsList,
-  all: (game: string) => mergeObjectsWithRekey(getArmList(game), getLegsList(game)),
+  all: (game: string) => [...getArmList(game), ...getLegsList(game)],
 };
 
 export function fetchBody(type: string = '', game: string): GeneratorItem {

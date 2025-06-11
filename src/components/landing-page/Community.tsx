@@ -6,8 +6,8 @@ const Community = () => {
       <h2>Become a Part of the Field Kit</h2>
       <p>
         The Off The Grid Field Kit is a community-driven project, and we need your help to make it
-        better. Whether you've found a bug, have an idea for a new tool, or want to contribute to
-        the code, your input is invaluable.
+        better. Whether you&apos;ve found a bug, have an idea for a new tool, or want to contribute
+        to the code, your input is invaluable.
       </p>
       <Button
         variant='outline-primary'
