@@ -9,7 +9,7 @@ import SimpleGeneratorView from '@/components/generators/SimpleGeneratorView';
 // --- Helpers ---
 import { scrollToTop } from '@/helpers/scrollToTop';
 import { fetchWeapon } from '@/helpers/fetch/fetchWeapon';
-// import { fetchAttachments } from "@/helpers/fetch/fetchAttachments";
+import { fetchAttachments } from '@/helpers/fetch/fetchAttachments';
 import { fetchBody } from '@/helpers/fetch/fetchBody';
 import { fetchClassName } from '@/helpers/fetch/fetchClassName';
 import { fetchEquipment } from '@/helpers/fetch/fetchEquipment';
@@ -18,7 +18,7 @@ import { sendEvent } from '@silocitypages/utils';
 // --- Data ---
 import defaultData from '@/json/otg/default-generator-info.json';
 
-const defaultWeapon = { name: '', type: '', game: '', no_attach: false, cost: 0 };
+const defaultWeapon = { name: '', type: '', rarity: '', game: '', no_attach: false, cost: 0 };
 const defaultItem = { name: '', type: '', game: '', cost: 0 };
 
 function OffTheGridLoadout() {
@@ -195,9 +195,9 @@ async function fetchLoadoutData(setData) {
     let deliveryCost = 500;
     const randClassName = fetchClassName();
     const primaryWeapon = Math.random() < 0.5 ? fetchWeapon('primary', game) : defaultWeapon;
-    // const primAttachCount = 1;
-    // const secAttachCount = 1;
-    // const sideAttachCount = 1;
+    const primAttachCount = 1;
+    const secAttachCount = 1;
+    const sideAttachCount = 1;
 
     const weapons = {
       primary: { weapon: primaryWeapon, attachments: '' },
@@ -216,20 +216,26 @@ async function fetchLoadoutData(setData) {
     deliveryCost += weapons?.secondary.weapon.cost || 0;
     deliveryCost += weapons?.sidearm.weapon.cost || 0;
 
-    //Get Primary Attachments
-    // if (!weapons.primary.weapon?.no_attach) {
-    //     weapons.primary.attachments = Object.values(fetchAttachments(weapons.primary.weapon, primAttachCount)).join(", ")
-    // }
+    // Get Primary Attachments
+    if (weapons.primary.weapon && !weapons.primary.weapon?.no_attach) {
+      weapons.primary.attachments = Object.values(
+        fetchAttachments(weapons.primary.weapon, primAttachCount)
+      ).join(', ');
+    }
 
-    //Get Secondary Attachments
-    // if (!weapons.secondary.weapon?.no_attach) {
-    //     weapons.secondary.attachments = Object.values(fetchAttachments(weapons.secondary.weapon, secAttachCount)).join(", ")
-    // }
+    // Get Secondary Attachments
+    if (weapons.secondary.weapon && !weapons.secondary.weapon?.no_attach) {
+      weapons.secondary.attachments = Object.values(
+        fetchAttachments(weapons.secondary.weapon, secAttachCount)
+      ).join(', ');
+    }
 
-    //Get Sidearm Attachments
-    // if (!weapons.sidearm.weapon?.no_attach) {
-    //     weapons.sidearm.attachments = Object.values(fetchAttachments(weapons.sidearm.weapon, sideAttachCount)).join(", ")
-    // }
+    // Get Sidearm Attachments
+    if (weapons.sidearm.weapon && !weapons.sidearm.weapon?.no_attach) {
+      weapons.sidearm.attachments = Object.values(
+        fetchAttachments(weapons.sidearm.weapon, sideAttachCount)
+      ).join(', ');
+    }
 
     const body = {
       left_arm: Math.random() < 0.5 ? fetchBody('arm', game) : defaultItem,
