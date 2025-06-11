@@ -7,7 +7,7 @@ import PageLayout from '@/components/PageLayout';
 
 export default function LandingPage() {
   return (
-    <PageLayout>
+    <PageLayout headerShowBadge={true}>
       <Hero />
       <Tools />
       <WhatsNew />

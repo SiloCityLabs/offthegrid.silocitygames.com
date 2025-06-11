@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <PageLayout>
+    <PageLayout headerShowBadge={true}>
       <Container className='text-center py-5'>
         <NotFoundRedirector />
 
