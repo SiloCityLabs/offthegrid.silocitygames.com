@@ -9,7 +9,7 @@ const config: Config = {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     // --- Static File Assets (images, etc.) ---
     '^.+\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/__mocks__/fileMock.js',
-    '^@/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^@silocitypages/utils$': '<rootDir>/packages/utils/src/index.ts', // Or your actual source entry
     '^@silocitypages/ui-core$': '<rootDir>/packages/ui-core/src/index.ts', // Or your actual source entry
   },

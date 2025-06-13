@@ -1,8 +1,8 @@
 {
   "id": "offthegrid.silocitygames.com",
-  "name": "Off The Grid",
-  "short_name": "",
-  "description": "",
+  "name": "Off The Grid Field Kit",
+  "short_name": "OTG Field Kit",
+  "description": "Master Off The Grid with the OTG Field Kit! Access random loadouts, pick drop spots for Extraction Royale, and browse detailed item stats & game information.",
   "lang": "en-US",
   "dir": "ltr",
   "theme_color": "#DC3545",

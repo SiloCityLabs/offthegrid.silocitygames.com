@@ -1,0 +1,47 @@
+[
+  {
+    "Date": "June 13, 2025",
+    "Type": "Upgrade",
+    "Link": { "Url": "/", "Text": "Landing Page:" },
+    "Changes": "Launched the new beta site, featuring a completely redesigned landing page with improved navigation and a streamlined user experience."
+  },
+  {
+    "Date": "June 12, 2025",
+    "Type": "Upgrade",
+    "Link": { "Url": "/generator", "Text": "Generator:" },
+    "Changes": "Completely redesigned generator page with a streamlined user experience."
+  },
+  {
+    "Date": "June 11, 2025",
+    "Type": "Upgrade",
+    "Link": { "Url": "", "Text": "" },
+    "Changes": "The Field Kit has been upgraded to the latest version of Silo City Pages, bringing performance and stability improvements across the board."
+  },
+  {
+    "Date": "June 10, 2025",
+    "Type": "New",
+    "Link": { "Url": "/info", "Text": "Field Kit Info:" },
+    "Changes": "Created and released the \"Field Kit Information\" page, a new resource for detailed information regarding in-game assets such as equipment, weapons, and body parts."
+  },
+  {
+    "Date": "June 10, 2025",
+    "Type": "New",
+    "Link": {
+      "Url": "/where-we-droppin/extraction-royale",
+      "Text": "Where We Droppin - Extraction Royale:"
+    },
+    "Changes": "The where we droppin page is now online! Drop into the Extraction Royale mode and explore the latest features and updates."
+  },
+  {
+    "Date": "June 10, 2025",
+    "Type": "New",
+    "Link": { "Url": "/about", "Text": "About Us:" },
+    "Changes": "Created an About Us page to provide more information about the project and its goals."
+  },
+  {
+    "Date": "June 10, 2025",
+    "Type": "New",
+    "Link": { "Url": "/generator", "Text": "Generator:" },
+    "Changes": "The Random Loadout Generator is now online! Start creating unique and challenging loadouts today."
+  }
+]
