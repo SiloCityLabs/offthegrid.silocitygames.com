@@ -16,7 +16,7 @@ import { fetchEquipment } from '@/helpers/fetch/fetchEquipment';
 // --- Utils ---
 import { sendEvent } from '@silocitypages/utils';
 // --- Data ---
-import defaultData from '@/json/otg/default-generator-info.json';
+import defaultData from '@/data/otg/default-generator-info.json';
 
 const defaultWeapon = { name: '', type: '', rarity: '', game: '', no_attach: false, cost: 0 };
 const defaultItem = { name: '', type: '', game: '', cost: 0 };

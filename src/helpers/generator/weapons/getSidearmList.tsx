@@ -1,5 +1,5 @@
 // --- Data ---
-import otgList from '@/json/generator/weapons/sidearm.json';
+import otgList from '@/data/generator/weapons/sidearm.json';
 // --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 

@@ -1,5 +1,5 @@
 // --- Data ---
-import otgList from '@/json/generator/equipment/backpack.json';
+import otgList from '@/data/generator/equipment/backpack.json';
 // --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 

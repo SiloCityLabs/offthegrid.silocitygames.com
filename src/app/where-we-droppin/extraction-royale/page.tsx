@@ -7,7 +7,7 @@ import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import WhereWeDroppin from '@/components/WhereWeDroppin';
 // --- Data ---
-import mapInfo from '@/json/where-we-droppin/extraction-royale.json';
+import mapInfo from '@/data/where-we-droppin/extraction-royale.json';
 
 export const metadata: Metadata = {
   title: 'Extraction Royale - Where We Droppin?',

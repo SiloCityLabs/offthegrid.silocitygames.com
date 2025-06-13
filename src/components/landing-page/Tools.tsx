@@ -2,7 +2,7 @@ import { Row, Col, Container } from 'react-bootstrap';
 // --- Components ---
 import { SclCard } from '@silocitypages/ui-core';
 // --- Data ---
-import tools from '@/json/index/generator-list.json';
+import tools from '@/data/index/generator-list.json';
 
 const Tools = () => {
   return (

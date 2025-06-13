@@ -5,7 +5,7 @@ import { getLegsList } from '@/helpers/generator/body/getLegsList';
 // --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 // --- Data ---
-import raritys from '@/json/generator/raritys/body.json';
+import raritys from '@/data/generator/raritys/body.json';
 
 const bodyListGetters: Record<string, (game: string) => GeneratorItem[]> = {
   arm: getArmList,

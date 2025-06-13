@@ -5,8 +5,8 @@ import { getSidearmList } from '@/helpers/generator/weapons/getSidearmList';
 // --- Types ---
 import { GeneratorItem, Rarity } from '@/types/Generator';
 // --- Data ---
-import primaryRaritys from '@/json/generator/raritys/weapons/primary.json';
-import sidearmRaritys from '@/json/generator/raritys/weapons/sidearm.json';
+import primaryRaritys from '@/data/generator/raritys/weapons/primary.json';
+import sidearmRaritys from '@/data/generator/raritys/weapons/sidearm.json';
 
 const weaponListGetters: Record<string, (game: string) => GeneratorItem[]> = {
   primary: getPrimaryList,

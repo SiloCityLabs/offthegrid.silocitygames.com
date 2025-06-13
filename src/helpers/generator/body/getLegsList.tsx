@@ -1,5 +1,5 @@
 // --- Data ---
-import otgList from '@/json/generator/body/legs.json';
+import otgList from '@/data/generator/body/legs.json';
 // --- Types ---
 import { GeneratorItem } from '@/types/Generator';
 

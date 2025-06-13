@@ -92,6 +92,10 @@
     text-decoration 0.2s ease-in-out;
 }
 
+.text-otg {
+  color: var(--otg-red) !important;
+}
+
 /* OTG Red Button - .btn-otg */
 .btn-otg {
   background-color: var(--otg-red);

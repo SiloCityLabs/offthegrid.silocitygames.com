@@ -6,8 +6,8 @@ import InfoList from '@/components/info/InfoList';
 // --- Helpers ---
 import { getWeapon } from '@/helpers/info/getWeapon';
 // --- Data ---
-import primaryRarity from '@/json/generator/raritys/weapons/primary.json';
-import sidearmRarity from '@/json/generator/raritys/weapons/sidearm.json';
+import primaryRarity from '@/data/generator/raritys/weapons/primary.json';
+import sidearmRarity from '@/data/generator/raritys/weapons/sidearm.json';
 
 interface ListProps {
   game: string;

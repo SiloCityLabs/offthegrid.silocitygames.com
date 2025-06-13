@@ -7,7 +7,7 @@ import InfoList from '@/components/info/InfoList';
 // --- Helpers ---
 import { getBody } from '@/helpers/info/getBody';
 // --- Data ---
-import bodyRarity from '@/json/generator/raritys/body.json';
+import bodyRarity from '@/data/generator/raritys/body.json';
 
 interface ListProps {
   game: string;
