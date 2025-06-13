@@ -176,11 +176,11 @@ export default function FeedbackForm() {
 
         <div className='text-center mt-4 d-flex justify-content-center'>
           <Link href='/' passHref>
-            <Button variant='outline-secondary' className='me-3'>
+            <Button variant='outline-otg' className='me-3'>
               Cancel
             </Button>
           </Link>
-          <Button variant='primary' type='submit'>
+          <Button variant='otg' type='submit'>
             Create GitHub Issue
           </Button>
         </div>
