@@ -1,5 +1,3 @@
-// --- React ---
-import { Row, Col } from 'react-bootstrap';
 // --- Next ---
 import Link from 'next/link';
 // --- Data ---

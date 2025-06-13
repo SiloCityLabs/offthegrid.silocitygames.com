@@ -96,6 +96,10 @@
   color: var(--otg-red) !important;
 }
 
+.bg-otg {
+  background-color: var(--otg-red) !important;
+}
+
 /* Icon */
 .icon-spacer {
   margin-right: 0.3em;

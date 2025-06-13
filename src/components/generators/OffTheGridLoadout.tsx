@@ -191,7 +191,7 @@ function OffTheGridLoadout() {
         <Row className='justify-content-center mt-4'>
           <Col xs='auto' className='text-center'>
             <p>
-              We don't have all attachment info yet.
+              We don&apos;t have all attachment info yet.
               <Link
                 href={githubLink}
                 target='_blank'
