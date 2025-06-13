@@ -2,10 +2,10 @@
 
 // --- React ---
 import { useEffect, useState } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card } from 'react-bootstrap'; // Import Card
+import Link from 'next/link'; // Assuming you use Next.js for the Link component
 // --- Components ---
 import ClassName from '@/components/ClassName';
-import SimpleGeneratorView from '@/components/generators/SimpleGeneratorView';
 // --- Helpers ---
 import { scrollToTop } from '@/helpers/scrollToTop';
 import { fetchWeapon } from '@/helpers/fetch/fetchWeapon';
@@ -15,11 +15,26 @@ import { fetchClassName } from '@/helpers/fetch/fetchClassName';
 import { fetchEquipment } from '@/helpers/fetch/fetchEquipment';
 // --- Utils ---
 import { sendEvent } from '@silocitypages/utils';
+import { generateGithubLink } from '@silocitypages/utils';
 // --- Data ---
 import defaultData from '@/data/otg/default-generator-info.json';
 
+// --- Constants ---
 const defaultWeapon = { name: '', type: '', rarity: '', game: '', no_attach: false, cost: 0 };
 const defaultItem = { name: '', type: '', game: '', cost: 0 };
+
+// Helper to render styled rarity text
+const RarityText = ({ rarity, children }) => {
+  const rarityColors = {
+    Epic: '#8a2be2', // Purple
+    Rare: '#0070dd', // Blue
+    Uncommon: '#28a745', // Green
+    Common: '#6c757d', // Grey
+  };
+  const color = rarityColors[rarity] || 'inherit';
+
+  return <span style={{ color, fontWeight: 'bold' }}>{children}</span>;
+};
 
 function OffTheGridLoadout() {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +49,6 @@ function OffTheGridLoadout() {
 
   const handleClick = async () => {
     setIsGenerating(true);
-
     setTimeout(() => {
       fetchLoadoutData(setData);
       setIsGenerating(false);
@@ -42,139 +56,149 @@ function OffTheGridLoadout() {
     }, 1000);
   };
 
+  // --- NEW: Generate the GitHub link for contributions ---
+  // Note: Replace with your actual weapon name logic if possible for a more specific issue title.
+  const githubLink = generateGithubLink(
+    process.env.NEXT_PUBLIC_APP_GITHUB_OWNER,
+    process.env.NEXT_PUBLIC_APP_GITHUB_REPO,
+    {
+      title: `[OffTheGrid] - Suggest Weapon Attachments`,
+      labels: 'enhancement',
+      template: 'manage-weapon-attachments-template.md',
+    }
+  );
+
   const { deliveryCost, randClassName, weapons, body, equipment } = data;
 
   if (isLoading) {
     return <div className='text-center'>Loading...</div>;
   }
 
+  // --- REFACTORED JSX STRUCTURE ---
   return (
     <>
-      <Container id='random-class' className='shadow-lg p-3 bg-body rounded'>
+      <Container id='random-class' className='shadow-lg p-3 p-md-4 bg-body rounded'>
         <ClassName isGenerating={isGenerating} value={randClassName} />
-        <Row className='justify-content-md-center'>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Primary'
-              value={
-                !weapons.primary.weapon.name
-                  ? 'None'
-                  : `${weapons.primary.weapon.rarity}: ${weapons.primary.weapon.name}`
-              }
-            />
-            <br />
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Primary Attachments'
-              value={!weapons.primary.attachments ? 'No Attachments' : weapons.primary.attachments}
-            />
-          </Col>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Secondary'
-              value={
-                !weapons.secondary.weapon.name
-                  ? 'None'
-                  : `${weapons.secondary.weapon.rarity}: ${weapons.secondary.weapon.name}`
-              }
-            />
-            <br />
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Secondary Attachments'
-              value={
-                !weapons.secondary.attachments ? 'No Attachments' : weapons.secondary.attachments
-              }
-            />
-          </Col>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Sidearm'
-              value={
-                !weapons.sidearm.weapon.name
-                  ? 'None'
-                  : `${weapons.sidearm.weapon.rarity}: ${weapons.sidearm.weapon.name}`
-              }
-            />
-            <br />
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Sidearm Attachments'
-              value={!weapons.sidearm.attachments ? 'No Attachments' : weapons.sidearm.attachments}
-            />
-          </Col>
+
+        {/* --- Section 1: Weapons --- */}
+        <h4 className='text-center text-muted mb-3'>Weapons</h4>
+        <Row>
+          {['primary', 'secondary', 'sidearm'].map((type) => {
+            const weaponData = weapons[type];
+            return (
+              <Col md={4} key={type} className='mb-3'>
+                <Card className='h-100 text-center'>
+                  <Card.Header as='h5' className='text-capitalize'>
+                    {type}
+                  </Card.Header>
+                  <Card.Body>
+                    {weaponData.weapon.name ? (
+                      <>
+                        <Card.Title>
+                          <RarityText rarity={weaponData.weapon.rarity}>
+                            {weaponData.weapon.rarity}
+                          </RarityText>
+                          {`: ${weaponData.weapon.name}`}
+                        </Card.Title>
+                        <Card.Text className='text-muted'>
+                          <strong>Attachments:</strong>
+                          <br />
+                          {weaponData.attachments || 'No Attachments'}
+                        </Card.Text>
+                      </>
+                    ) : (
+                      <Card.Text>None</Card.Text>
+                    )}
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
         </Row>
+
         <hr />
-        <Row className='justify-content-md-center'>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Left Arm'
-              value={
-                !body.left_arm.name ? 'None' : `${body.left_arm.rarity}: ${body.left_arm.name}`
-              }
-            />
+
+        {/* --- Section 2: Body & Equipment --- */}
+        <h4 className='text-center text-muted mb-3'>Body & Equipment</h4>
+        <Row>
+          {/* Body Parts */}
+          <Col md={6} className='mb-3'>
+            <Card className='h-100'>
+              <Card.Body className='d-flex justify-content-around text-center'>
+                <div>
+                  <h5>Left Arm</h5>
+                  <p>
+                    {body.left_arm.name ? `${body.left_arm.rarity}: ${body.left_arm.name}` : 'None'}
+                  </p>
+                </div>
+                <div>
+                  <h5>Legs</h5>
+                  <p>{body.legs.name ? `${body.legs.rarity}: ${body.legs.name}` : 'None'}</p>
+                </div>
+                <div>
+                  <h5>Right Arm</h5>
+                  <p>
+                    {body.right_arm.name
+                      ? `${body.right_arm.rarity}: ${body.right_arm.name}`
+                      : 'None'}
+                  </p>
+                </div>
+              </Card.Body>
+            </Card>
           </Col>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Legs'
-              value={!body.legs.name ? 'None' : `${body.legs.rarity}: ${body.legs.name}`}
-            />
-          </Col>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Right Arm'
-              value={
-                !body.right_arm.name ? 'None' : `${body.right_arm.rarity}: ${body.right_arm.name}`
-              }
-            />
+
+          {/* Equipment */}
+          <Col md={6} className='mb-3'>
+            <Card className='h-100'>
+              <Card.Body className='d-flex justify-content-around text-center'>
+                <div>
+                  <h5>Backpack</h5>
+                  <p>
+                    {equipment.backpack.name
+                      ? `${equipment.backpack.rarity}: ${equipment.backpack.name}`
+                      : 'None'}
+                  </p>
+                </div>
+                <div>
+                  <h5>Consumable</h5>
+                  <p>{equipment.consumable.name ? `${equipment.consumable.name}` : 'None'}</p>
+                </div>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
+
         <hr />
-        <Row className='justify-content-md-center mb-3'>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Backpack'
-              value={
-                !equipment.backpack.name
-                  ? 'None'
-                  : `${equipment.backpack.rarity}: ${equipment.backpack.name}`
-              }
-            />
-          </Col>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Consumable'
-              value={
-                !equipment.consumable.name
-                  ? 'None'
-                  : `${equipment.consumable.rarity}: ${equipment.consumable.name}`
-              }
-            />
-          </Col>
-          <Col sm className='text-center mb-3 mb-md-0'>
-            <SimpleGeneratorView
-              isGenerating={isGenerating}
-              title='Delivery Cost'
-              value={!deliveryCost ? 'None' : String(deliveryCost)}
-            />
+
+        {/* --- Section 3: Cost and Generation Button --- */}
+        <Row className='justify-content-center align-items-center mb-3'>
+          <Col xs={12} className='text-center'>
+            <h5>Total Delivery Cost: {deliveryCost || '0'}</h5>
           </Col>
         </Row>
-        <Row id='button-row'>
-          <Col className='text-center'>
+        <Row id='button-row' className='justify-content-center'>
+          <Col xs='auto' className='text-center'>
             <Button
               variant='otg'
+              size='lg' // Made button larger for emphasis
               disabled={isGenerating}
               onClick={isGenerating ? undefined : handleClick}>
               {isGenerating ? 'Generating Loadout...' : 'Generate Loadout'}
             </Button>
+          </Col>
+        </Row>
+
+        <Row className='justify-content-center mt-4'>
+          <Col xs='auto' className='text-center'>
+            <p>
+              We don't have all attachment info yet.
+              <Link
+                href={githubLink}
+                target='_blank'
+                className='ms-1 text-otg text-decoration-none'>
+                Help us by suggesting attachments!
+              </Link>
+            </p>
           </Col>
         </Row>
       </Container>

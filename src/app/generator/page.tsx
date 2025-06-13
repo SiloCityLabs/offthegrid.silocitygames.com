@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function GeneratorPage() {
   return (
     <PageLayout headerShowBadge={true}>
-      <Container className='main-content mt-3'>
+      <Container className='main-content mb-5'>
         <Row>
           <Col>
             <h2 className='text-center mt-3'>
