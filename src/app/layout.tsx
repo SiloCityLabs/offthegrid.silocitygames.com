@@ -4,6 +4,8 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 // --- Components ---
 import { GoogleAnalytics } from '@silocitypages/ui-core';
+import { WebSite, WithContext } from 'schema-dts';
+import { StructuredData } from '@silocitypages/utils';
 
 // --- Styles ---
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -35,9 +37,19 @@ export const viewport: Viewport = { width: 'device-width', initialScale: 1, maxi
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const websiteSchema: WithContext<WebSite> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Off The Grid',
+    url: 'https://offthegrid.silocitygames.com/',
+  };
+
   return (
     <html lang='en'>
       <body className={inter.className}>
+        <head>
+          <StructuredData data={websiteSchema} />
+        </head>
         {children}
 
         {GA_TRACKING_ID && (

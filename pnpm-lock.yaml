@@ -55,6 +55,9 @@ importers:
       react-wheel-of-prizes-react19:
         specifier: ^1.0.13
         version: 1.0.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      schema-dts:
+        specifier: ^1.1.5
+        version: 1.1.5
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.6.3
