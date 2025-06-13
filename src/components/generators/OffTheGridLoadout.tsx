@@ -195,9 +195,9 @@ async function fetchLoadoutData(setData) {
     let deliveryCost = 500;
     const randClassName = fetchClassName();
     const primaryWeapon = Math.random() < 0.5 ? fetchWeapon('primary', game) : defaultWeapon;
-    const primAttachCount = 1;
-    const secAttachCount = 1;
-    const sideAttachCount = 1;
+    const primAttachCount = Math.floor(Math.random() * 3);
+    const secAttachCount = Math.floor(Math.random() * 3);
+    const sideAttachCount = Math.floor(Math.random() * 3);
 
     const weapons = {
       primary: { weapon: primaryWeapon, attachments: '' },
@@ -217,21 +217,21 @@ async function fetchLoadoutData(setData) {
     deliveryCost += weapons?.sidearm.weapon.cost || 0;
 
     // Get Primary Attachments
-    if (weapons.primary.weapon && !weapons.primary.weapon?.no_attach) {
+    if (weapons.primary.weapon && !weapons.primary.weapon?.no_attach && primAttachCount > 0) {
       weapons.primary.attachments = Object.values(
         fetchAttachments(weapons.primary.weapon, primAttachCount)
       ).join(', ');
     }
 
     // Get Secondary Attachments
-    if (weapons.secondary.weapon && !weapons.secondary.weapon?.no_attach) {
+    if (weapons.secondary.weapon && !weapons.secondary.weapon?.no_attach && secAttachCount > 0) {
       weapons.secondary.attachments = Object.values(
         fetchAttachments(weapons.secondary.weapon, secAttachCount)
       ).join(', ');
     }
 
     // Get Sidearm Attachments
-    if (weapons.sidearm.weapon && !weapons.sidearm.weapon?.no_attach) {
+    if (weapons.sidearm.weapon && !weapons.sidearm.weapon?.no_attach && sideAttachCount > 0) {
       weapons.sidearm.attachments = Object.values(
         fetchAttachments(weapons.sidearm.weapon, sideAttachCount)
       ).join(', ');

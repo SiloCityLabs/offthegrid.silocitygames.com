@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function FeedbackPage() {
   return (
-    <PageLayout>
+    <PageLayout headerShowBadge={true}>
       <Container className='py-3'>
         <h3 className='text-center'>Feedback</h3>
         <Row className='justify-content-center mt-3'>

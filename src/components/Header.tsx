@@ -13,8 +13,6 @@ interface Props {
 
 const defaultNavLinks = [
   { label: 'Home', href: '/', target: '' },
-  { label: 'Generator', href: '/generator', target: '' },
-  { label: 'Loadout Info', href: '/info', target: '' },
   { label: 'Changelog', href: '/changelog', target: '' },
   { label: 'Feedback', href: '/feedback', target: '' },
   { label: 'GitHub', href: process.env.NEXT_PUBLIC_APP_GITHUB_URL || '', target: '_blank' },
