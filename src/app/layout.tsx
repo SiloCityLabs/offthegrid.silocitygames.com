@@ -46,10 +46,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang='en'>
+      <head>
+        <StructuredData data={websiteSchema} />
+      </head>
+
       <body className={inter.className}>
-        <head>
-          <StructuredData data={websiteSchema} />
-        </head>
         {children}
 
         {GA_TRACKING_ID && (
