@@ -2,11 +2,17 @@
   {
     "Date": "June 13, 2025",
     "Type": "Upgrade",
+    "Link": { "Url": "/", "Text": "Landing Page:" },
+    "Changes": "Launched the new beta site, featuring a completely redesigned landing page with improved navigation and a streamlined user experience."
+  },
+  {
+    "Date": "June 12, 2025",
+    "Type": "Upgrade",
     "Link": { "Url": "", "Text": "" },
     "Changes": "The Field Kit has been upgraded to the latest version of Silo City Pages, bringing performance and stability improvements across the board."
   },
   {
-    "Date": "June 12, 2025",
+    "Date": "June 11, 2025",
     "Type": "New",
     "Link": { "Url": "", "Text": "" },
     "Changes": "The Random Loadout Generator is now online! Start creating unique and challenging loadouts today."

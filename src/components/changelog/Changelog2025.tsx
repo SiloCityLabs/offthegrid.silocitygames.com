@@ -21,7 +21,9 @@ function Changelog2025() {
               <p>
                 {entry.Link?.Url && entry.Link?.Text && (
                   <>
-                    <Link href={entry.Link.Url}>{entry.Link.Text}</Link>{' '}
+                    <Link href={entry.Link.Url} className='text-otg text-decoration-none'>
+                      {entry.Link.Text}
+                    </Link>{' '}
                   </>
                 )}
                 {entry.Changes}
