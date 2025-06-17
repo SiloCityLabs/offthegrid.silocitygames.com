@@ -42,6 +42,8 @@ const SclBadge: React.FC<SclBadgeProps> = ({
 
   if (colorScheme) {
     // --- Custom Theming Active ---
+    classList.push(styles.useCustomBg);
+
     // Set local CSS variables via inline style
     badgeDynamicStyles['--scl-badge-current-bg'] =
       `var(--scl-badge-bg-${colorScheme.toLowerCase()}, var(--scl-badge-bg-color-default))`;

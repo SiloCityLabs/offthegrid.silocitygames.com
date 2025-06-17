@@ -22,7 +22,6 @@
     These !important rules are crucial for overriding Bootstrap styles when a colorScheme is used.
     The React component sets --scl-badge-current-bg and --scl-badge-current-text via inline style.
   */
-  background-color: var(--scl-badge-current-bg, var(--scl-badge-bg-color-default)) !important;
   color: var(--scl-badge-current-text, var(--scl-badge-text-color)) !important;
   text-shadow: 1px 1px 2px var(--scl-badge-text-shadow-color);
 
@@ -34,6 +33,10 @@
   line-height: 1;
   text-align: center;
   white-space: nowrap;
+}
+
+.useCustomBg {
+  background-color: var(--scl-badge-current-bg, var(--scl-badge-bg-color-default)) !important;
 }
 
 /*
