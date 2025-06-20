@@ -42,22 +42,24 @@ function OffTheGridLoadout() {
   const [data, setData] = useState(defaultData);
 
   useEffect(() => {
-    fetchLoadoutData(setData);
-    setIsGenerating(false);
-    setIsLoading(false);
+    const fetchData = async () => {
+      await fetchLoadoutData(setData);
+      setIsGenerating(false);
+      setIsLoading(false);
+    };
+    fetchData();
   }, []);
 
   const handleClick = async () => {
     setIsGenerating(true);
-    setTimeout(() => {
-      fetchLoadoutData(setData);
+    setTimeout(async () => {
+      await fetchLoadoutData(setData);
       setIsGenerating(false);
       scrollToTop();
     }, 1000);
   };
 
-  // --- NEW: Generate the GitHub link for contributions ---
-  // Note: Replace with your actual weapon name logic if possible for a more specific issue title.
+  // --- Generate the GitHub link for contributions ---
   const githubLink = generateGithubLink(
     process.env.NEXT_PUBLIC_APP_GITHUB_OWNER,
     process.env.NEXT_PUBLIC_APP_GITHUB_REPO,
