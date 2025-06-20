@@ -14,7 +14,7 @@ interface ListProps {
   dataKeys?: Array<string>;
 }
 
-const defaultDataKeys = ['name', 'type', 'game', 'no_attach', 'no_attach_info'];
+const defaultDataKeys = ['name', 'type', 'game', 'rarity', 'cost', 'no_attach', 'no_attach_info'];
 
 export default function WeaponList({ game, dataKeys = defaultDataKeys }: ListProps) {
   const [isLoading, setIsLoading] = useState(true);
