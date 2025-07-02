@@ -12,14 +12,14 @@ const Community = () => {
       <Button
         variant='outline-otg'
         className='me-2'
-        href='https://github.com/silo-city/offthegrid.silocitygames.com/issues/new?template=bug_report.md'
+        href='https://github.com/SiloCityLabs/offthegrid.silocitygames.com/issues/new?template=bug_report.md'
         target='_blank'>
         Report a Bug
       </Button>
       <Button
         variant='outline-otg'
         className='me-2'
-        href='https://github.com/silo-city/offthegrid.silocitygames.com/issues/new?template=feature-request-template.md'
+        href='https://github.com/SiloCityLabs/offthegrid.silocitygames.com/issues/new?template=feature-request-template.md'
         target='_blank'>
         Request a Feature
       </Button>
