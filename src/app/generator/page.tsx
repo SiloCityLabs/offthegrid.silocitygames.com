@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 
 export default function GeneratorPage() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='main-content mb-5'>
         <Row>
           <Col>

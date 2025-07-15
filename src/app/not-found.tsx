@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='text-center py-5'>
         <NotFoundRedirector />
 

@@ -15,7 +15,11 @@ export const metadata: Metadata = {
 
 export default function ChangelogPage() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='mt-3 mb-3'>
         <Row className='shadow-lg p-3 bg-body rounded'>
           <Col>

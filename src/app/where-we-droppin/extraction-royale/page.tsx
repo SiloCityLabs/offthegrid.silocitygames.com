@@ -17,7 +17,11 @@ export const metadata: Metadata = {
 
 export default function InfoPage() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='main-content mt-3'>
         <Row>
           <Col>

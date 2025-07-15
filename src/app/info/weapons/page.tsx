@@ -14,7 +14,11 @@ export const metadata: Metadata = {
 
 export default function WeaponsInfoPage() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='main-content mb-4'>
         <Row>
           <Col>

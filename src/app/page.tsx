@@ -7,7 +7,11 @@ import PageLayout from '@/components/PageLayout';
 
 export default function LandingPage() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Hero />
       <Tools />
       <WhatsNew />

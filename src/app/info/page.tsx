@@ -5,9 +5,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 // --- Layout ---
 import PageLayout from '@/components/PageLayout';
-// --- Components ---
-// SclCard is no longer used, but you might have other components from this library
-// import { SclCard } from '@silocitypages/ui-core';
 
 export const metadata: Metadata = {
   title: 'Loadout Information',
@@ -38,7 +35,11 @@ const infoCards = [
 
 export default function InfoPage() {
   return (
-    <PageLayout headerShowBadge={true}>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='main-content mt-3'>
         <div className='text-center my-4'>
           <h1 className='display-4'>Loadout Information</h1>
