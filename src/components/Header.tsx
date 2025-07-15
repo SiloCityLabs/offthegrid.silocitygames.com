@@ -3,12 +3,17 @@
 // --- React ---
 import React from 'react';
 import { Container, Nav, Navbar, Badge } from 'react-bootstrap';
+// --- Next ---
+import Image from 'next/image';
 
 interface Props {
   className?: string;
   navLinks?: { label: string; href: string; target?: string }[];
   darkLinks?: boolean;
   showBadge?: boolean;
+  logoUrl?: string;
+  logoWidth?: number | string;
+  logoHeight?: number | string;
 }
 
 const defaultNavLinks = [
@@ -23,6 +28,9 @@ export default function Header({
   navLinks = defaultNavLinks,
   darkLinks = false,
   showBadge = false,
+  logoUrl,
+  logoWidth = 30,
+  logoHeight = 30,
 }: Props) {
   navLinks = navLinks.length > 0 ? navLinks : defaultNavLinks;
 
@@ -30,6 +38,15 @@ export default function Header({
     <Navbar id='site-header' expand='lg' bg='dark' data-bs-theme='dark' className={`${className}`}>
       <Container>
         <Navbar.Brand href='/' className='position-relative d-flex align-items-center'>
+          {logoUrl && (
+            <Image
+              src={logoUrl}
+              width={Number(logoWidth)}
+              height={Number(logoHeight)}
+              alt={`${process.env.NEXT_PUBLIC_APP_NAME || 'Site'} Logo`}
+              style={{ marginRight: '0.75rem' }}
+            />
+          )}
           {showBadge && (
             <Badge bg='warning' text='dark' style={{ fontSize: '.6rem', marginRight: '0.5rem' }}>
               {process.env.NEXT_PUBLIC_NAVBAR_BRAND_BADGE}
