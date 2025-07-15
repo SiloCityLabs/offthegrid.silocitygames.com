@@ -28,6 +28,19 @@ export const metadata: Metadata = {
   description: APP_DESC,
   keywords: APP_KEYWORDS?.split(',').map((k) => k.trim()),
   manifest: '/manifest.json',
+  appleWebApp: {
+    title: process.env.NEXT_PUBLIC_APP_NAME,
+    statusBarStyle: 'default',
+    capable: true,
+  },
+  icons: {
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    // For the Apple touch icon
+    apple: { url: '/apple-icon.png', type: 'image/png' },
+  },
 };
 
 // --- Viewport ---
