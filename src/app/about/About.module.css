@@ -1,0 +1,182 @@
+/* Custom styles for the About page */
+
+.aboutContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.aboutSection {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+
+.mainHeading {
+  color: var(--otg-red); /* Using a global CSS variable defined in globals.css */
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--otg-text);
+  margin-bottom: 2rem;
+}
+
+.appNameHighlight {
+  color: var(--otg-red);
+  font-weight: 700;
+}
+
+.iconSpacer {
+  margin-right: 0.25em;
+  vertical-align: middle; /* Ensures vertical alignment with text */
+  color: var(--otg-dark-gray); /* Darker icon color for contrast */
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.categoryHighlight {
+  font-weight: 700;
+  color: var(--otg-dark-gray);
+}
+
+.openSourceHighlight {
+  color: #0d6efd; /* A distinct color for "open-source" */
+  font-weight: 700;
+}
+
+.sectionDivider {
+  margin: 3rem 0; /* More vertical space around HR */
+  border-top: 2px solid var(--otg-light-gray);
+}
+
+.subHeading {
+  color: var(--otg-dark-gray);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center; /* Center align subheadings */
+}
+
+.techStackCol,
+.contactCol {
+  padding: 1rem 2rem; /* Add internal padding */
+}
+
+.techList {
+  list-style-type: none; /* Remove default bullet points */
+  padding-left: 0;
+  text-align: center; /* Center align list items */
+}
+
+.techList li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.techLink {
+  color: var(--otg-red) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.techLink:hover {
+  text-decoration: underline;
+  color: #a00028 !important; /* Slightly darker red on hover */
+}
+
+.contactText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--otg-text);
+  text-align: center; /* Center align contact text */
+}
+
+.githubLink {
+  color: var(--otg-red) !important;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.githubLink:hover {
+  text-decoration: underline;
+  color: #a00028 !important;
+}
+
+.createdByText {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  color: var(--otg-text);
+  font-weight: 500;
+}
+
+.heartIcon {
+  color: #dc3545;
+  margin: 0 0.05em;
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.creatorList {
+  margin-top: 1rem;
+}
+
+.creatorList li {
+  margin-bottom: 0.5rem;
+}
+
+.creatorLink {
+  color: #0d6efd !important; /* A distinct blue for external links */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.2s ease-in-out;
+}
+
+.creatorLink:hover {
+  text-decoration: underline;
+  color: #0a58ca !important; /* Darker blue on hover */
+}
+
+.disclaimerText {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #6c757d; /* Bootstrap secondary text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  /* Medium devices and smaller */
+  .techStackCol,
+  .contactCol {
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Small devices and smaller */
+  .mainHeading {
+    font-size: 2rem;
+  }
+  .introText,
+  .contactText,
+  .createdByText {
+    font-size: 1rem;
+  }
+  .subHeading {
+    font-size: 1.5rem;
+  }
+  .techList,
+  .contactCol,
+  .createdByText {
+    text-align: center; /* Ensure centering on small screens */
+  }
+}
