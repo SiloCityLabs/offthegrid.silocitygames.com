@@ -6,12 +6,14 @@ import type { Metadata } from 'next';
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import ChangelogTabs from '@/components/changelog/ChangelogTabs';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Changelog',
   description:
-    "Stay up-to-date on the latest features, bug fixes, and improvements to our off the grid class generator. See what's new and how we're making your loadout experience even better.",
-};
+    'Stay updated with the latest enhancements to the Off The Grid Field Kit! Discover new features, essential bug fixes, and performance improvements to optimize your loadout generation experience.',
+});
 
 export default function ChangelogPage() {
   return (

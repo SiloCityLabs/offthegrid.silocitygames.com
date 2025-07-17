@@ -6,11 +6,31 @@ import type { Metadata } from 'next';
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import WeaponList from '@/components/info/WeaponList';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Weapons',
-  description: 'View all weapons in Off The Grid.',
-};
+  description:
+    'Explore the complete arsenal of Off The Grid weapons. Dive into detailed information on assault rifles, sniper rifles, sidearms, and more, including their stats, available attachments, and customization options to optimize your combat strategy.',
+  keywords: [
+    'Off The Grid',
+    'weapons',
+    'firearms',
+    'arsenal',
+    'weapon stats',
+    'attachments',
+    'weapon customization',
+    'assault rifles',
+    'sniper rifles',
+    'sidearms',
+    'SMGs',
+    'shotguns',
+    'weapon list',
+    'weapon database',
+    'game guide',
+  ],
+});
 
 export default function WeaponsInfoPage() {
   return (

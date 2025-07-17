@@ -8,12 +8,27 @@ import PageLayout from '@/components/PageLayout';
 import WhereWeDroppin from '@/components/WhereWeDroppin';
 // --- Data ---
 import mapInfo from '@/data/where-we-droppin/extraction-royale.json';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Extraction Royale - Where We Droppin?',
   description:
-    'Spice up your Off The Grid gameplay! Randomly roll where you should land in off the grid extraction royale.',
-};
+    'Enhance your Off The Grid Extraction Royale matches! Use our random drop generator to discover unique landing spots and strategize your next move, ensuring fresh and unpredictable gameplay every time.',
+  keywords: [
+    'Off The Grid',
+    'Extraction Royale',
+    'random drop',
+    'landing spots',
+    'where to drop',
+    'map randomizer',
+    'drop generator',
+    'battle royale',
+    'game strategy',
+    'tactical drops',
+    'randomizer tool',
+  ],
+});
 
 export default function InfoPage() {
   return (

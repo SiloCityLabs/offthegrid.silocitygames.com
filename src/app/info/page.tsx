@@ -5,17 +5,37 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 // --- Layout ---
 import PageLayout from '@/components/PageLayout';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Loadout Information',
   description:
-    'Explore all the loadout options in Off The Grid. Delve into character bodies, tactical equipment, and an extensive arsenal of weapons to customize your operative.',
-};
+    "Access comprehensive Off The Grid loadout information. Explore detailed data on character bodies, tactical equipment, and an extensive arsenal of weapons to fully customize and optimize your operative's setup.",
+  keywords: [
+    'Off The Grid',
+    'loadout information',
+    'loadout options',
+    'character bodies',
+    'tactical equipment',
+    'weapons',
+    'weapon customization',
+    'Off The Grid guide',
+    'game info',
+    'operative customization',
+    'body types',
+    'cyberlimbs',
+    'armor',
+    'utility items',
+    'firearms',
+    'attachments',
+  ],
+});
 
 const infoCards = [
   {
     title: 'Body',
-    text: 'Customize your operative’s physical core. This includes selecting different body types, which can influence health, stamina, and cosmetic appearance.',
+    text: "Customize your operative's physical core. This includes selecting different body types, which can influence health, stamina, and cosmetic appearance.",
     link: '/info/body',
     badge: 'Core Stats',
   },

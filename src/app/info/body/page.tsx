@@ -6,11 +6,28 @@ import type { Metadata } from 'next';
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import BodyList from '@/components/info/BodyList';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Body Augments',
-  description: 'View all body augments in Off The Grid.',
-};
+  description:
+    "Explore comprehensive details on Off The Grid body augments. Discover how different body types and cyberlimbs impact your operative's health, stamina, and abilities, allowing for optimal character customization.",
+  keywords: [
+    'Off The Grid',
+    'body augments',
+    'cyberlimbs',
+    'character bodies',
+    'body types',
+    'operative stats',
+    'health',
+    'stamina',
+    'abilities',
+    'game information',
+    'loadout customization',
+    'Off The Grid guide',
+  ],
+});
 
 export default function BodyInfoPage() {
   return (

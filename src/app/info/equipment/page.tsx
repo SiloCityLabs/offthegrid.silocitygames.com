@@ -6,11 +6,28 @@ import type { Metadata } from 'next';
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import EquipmentList from '@/components/info/EquipmentList';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Equipment',
-  description: 'View all equipment in Off The Grid.',
-};
+  description:
+    'Access comprehensive Off The Grid equipment details. Explore a wide range of tactical gear, including armor, helmets, and utility items like grenades and medical kits, to gain a crucial advantage in the field.',
+  keywords: [
+    'Off The Grid',
+    'equipment',
+    'tactical gear',
+    'armor',
+    'helmets',
+    'utility items',
+    'grenades',
+    'medical kits',
+    'consumables',
+    'loadout information',
+    'game guide',
+    'operative customization',
+  ],
+});
 
 export default function EquipmentInfoPage() {
   return (
