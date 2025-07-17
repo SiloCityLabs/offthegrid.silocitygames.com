@@ -1,4 +1,8 @@
-# Off The Grid Field Kit
+<div align="center">
+  <img src="/public/icons/logo-banner-red-trans.png" alt="OTG Field Kit Logo and Title"> 
+</div>
+
+<hr />
 
 [![Visit Site](https://img.shields.io/badge/Visit-offthegrid.silocitygames.com-blue?style=for-the-badge&logo=rocket)](https://offthegrid.silocitygames.com)
 [![Official Game](https://img.shields.io/badge/Off%20The%20Grid%20Game-gameoffthegrid.com-lightgrey?style=for-the-badge)](https://gameoffthegrid.com)
