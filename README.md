@@ -106,4 +106,4 @@ Under the following terms:
 
 ---
 
-The **Off The Grid Field Kit** is made with ❤️ in collaboration with OneBuffaloLabs and SiloCityLabs for the Off The Grid community.
+**Off The Grid Field Kit** is made with ❤️ in collaboration with [OneBuffaloLabs](https://onebuffalolabs.com) and [SiloCityLabs](https://silocitylabs.com) for the Off The Grid community.
