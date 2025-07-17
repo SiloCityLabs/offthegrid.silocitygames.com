@@ -7,11 +7,13 @@ import type { Metadata } from 'next';
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import FeedbackForm from '@/components/feedback/FeedbackForm';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Feedback',
   description: 'Provide feedback or report an issue via GitHub.',
-};
+});
 
 export default function FeedbackPage() {
   return (

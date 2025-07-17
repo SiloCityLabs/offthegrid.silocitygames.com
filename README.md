@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="/public/icons/logo-banner-red-trans.png" alt="OTG Field Kit Logo and Title"> 
+  <img src="/public/icons/logo-banner-red-trans.png" alt="OTG Field Kit Logo and Title">
 </div>
 
 <hr />
