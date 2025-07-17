@@ -5,13 +5,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 // --- Layout ---
 import PageLayout from '@/components/PageLayout';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Privacy Policy',
   description:
     'Privacy policy outlining how Techreanimate collects, uses, maintains and discloses user information.',
   keywords: ['privacy policy', 'data collection', 'user data', 'cookies', 'techreanimate'],
-};
+});
 
 export default function PrivacyPage() {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || '';

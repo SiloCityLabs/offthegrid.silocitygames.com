@@ -4,12 +4,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import type { Metadata } from 'next';
 // --- Layout ---
 import PageLayout from '@/components/PageLayout';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Terms And Conditions',
   description: 'This is the terms and conditions for using our website.',
   keywords: ['terms and conditions', 'legal', 'privacy policy'],
-};
+});
 
 export default function TermsPage() {
   return (
