@@ -251,4 +251,4 @@ If you encounter any issues or have questions, please file an issue on the [GitH
 
 ---
 
-This project is a collaborative effort by [SiloCityLabs](https://silocitylabs.com) and [OneBuffaloLabs](https://onebuffalolabs.com).
+This project is a collaborative effort by [OneBuffaloLabs](https://onebuffalolabs.com) and [SiloCityLabs](https://silocitylabs.com).
