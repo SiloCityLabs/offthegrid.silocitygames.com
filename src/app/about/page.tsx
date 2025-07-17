@@ -2,20 +2,38 @@
 import { Container, Row, Col } from 'react-bootstrap';
 // --- Next ---
 import type { Metadata } from 'next';
-import Link from 'next/link'; // Import Link for internal navigation
+import Link from 'next/link';
 // --- Layout ---
 import PageLayout from '@/components/PageLayout';
 // --- Font Awesome ---
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGun, faRobot, faBox, faHeart } from '@fortawesome/free-solid-svg-icons'; // Added faHeart icon
+import { faGun, faRobot, faBox, faHeart } from '@fortawesome/free-solid-svg-icons';
 // --- Utils ---
 import { generateGithubLink } from '@silocitypages/utils';
-import { generateMetadata } from '@/utils/metadata'; // Assuming this utility is used for metadata
-
+import { generateMetadata } from '@/utils/metadata';
 // --- Styles ---
-import styles from './About.module.css'; // Import the new module CSS
+import styles from './About.module.css';
 
-export const metadata: Metadata = generateMetadata({ title: 'About' });
+export const metadata: Metadata = generateMetadata({
+  title: 'About',
+  description:
+    'Explore the Off The Grid Field Kit, your essential open-source companion for the Off The Grid game. Learn about our loadout generator for weapons, cyberlimbs, and equipment, and discover the tech used to build this fan-made project by OneBuffaloLabs and SiloCityGames.',
+  keywords: [
+    'Off The Grid',
+    'Field Kit',
+    'loadout generator',
+    'weapons',
+    'cyberlimbs',
+    'equipment',
+    'open source',
+    'fan-made',
+    'about us',
+    'OneBuffaloLabs',
+    'SiloCityGames',
+    'game tools',
+    'tactical adaptability',
+  ],
+});
 
 export default function AboutPage() {
   const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Off The Grid Field Kit';

@@ -19,7 +19,11 @@ export default function PrivacyPage() {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || '';
 
   return (
-    <PageLayout>
+    <PageLayout
+      headerShowBadge={true}
+      headerLogoUrl='/icons/otg-marker.svg'
+      headerLogoWidth={50}
+      headerLogoHeight={50}>
       <Container className='py-3' fluid>
         <Row>
           <Col>

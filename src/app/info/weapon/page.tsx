@@ -7,11 +7,25 @@ import type { Metadata } from 'next';
 import PageLayout from '@/components/PageLayout';
 // --- Components ---
 import WeaponDisplayClient from '@/components/info/WeaponDisplayClient';
+// --- Utils ---
+import { generateMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Weapon',
-  description: 'View information and all available attachments for the weapon in Off The Grid.',
-};
+  description:
+    'Get in-depth details on a specific Off The Grid weapon. Explore its comprehensive stats, available attachments, and customization options to master your loadout and combat effectiveness.',
+  keywords: [
+    'Off The Grid weapon',
+    'weapon information',
+    'weapon details',
+    'weapon attachments',
+    'weapon stats',
+    'weapon customization',
+    'firearm guide',
+    'game weapon info',
+    'weapon loadout',
+  ],
+});
 
 export default function WeaponsInfoPage() {
   return (
