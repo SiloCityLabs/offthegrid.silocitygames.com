@@ -248,3 +248,7 @@ See the [LICENSE](./LICENSE) file and the [Creative Commons website](https://cre
 ## Support
 
 If you encounter any issues or have questions, please file an issue on the [GitHub Issues page](https://github.com/SiloCityLabs/SiloCityPages/issues).
+
+---
+
+This project is a collaborative effort by [SiloCityLabs](https://silocitylabs.com) and [OneBuffaloLabs](https://onebuffalolabs.com).
