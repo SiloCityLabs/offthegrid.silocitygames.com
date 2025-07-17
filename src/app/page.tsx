@@ -1,9 +1,13 @@
-import Hero from '@/components/landing-page/Hero';
-import Tools from '@/components/landing-page/Tools';
-import WhatsNew from '@/components/landing-page/WhatsNew';
-import Community from '@/components/landing-page/Community';
-import About from '@/components/landing-page/About';
+// --- Next ---
+import dynamic from 'next/dynamic';
+// --- Components ---
 import PageLayout from '@/components/PageLayout';
+import Hero from '@/components/landing-page/Hero';
+// --- Dynamic Components ---
+const Tools = dynamic(() => import('@/components/landing-page/Tools'));
+const WhatsNew = dynamic(() => import('@/components/landing-page/WhatsNew'));
+const Community = dynamic(() => import('@/components/landing-page/Community'));
+const About = dynamic(() => import('@/components/landing-page/About'));
 
 export default function LandingPage() {
   return (
